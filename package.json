@@ -1,0 +1,20 @@
+{
+  "name": "zhiqiu_meng_wx_frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdspgy/zhiqiu_meng_wx_frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sdspgy/zhiqiu_meng_wx_frontend/issues"
+  },
+  "homepage": "https://github.com/sdspgy/zhiqiu_meng_wx_frontend#readme"
+}
