@@ -1,7 +1,22 @@
 {
   "pages": [
+    "pages/welcome/welcome",
     "pages/index/index",
     "pages/logs/logs"
+  ],
+  "subpackages": [
+    {
+      "root": "packageManage",
+      "pages": [
+        "pages/my/my"
+      ]
+    },
+    {
+      "root": "packageSearch",
+      "pages": [
+        "pages/main/main"
+      ]
+    }
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,6 +1,9 @@
 //app.js
+import utils from './utils/util.js';
 App({
-  onLaunch: function () {
+  onLaunch: function(options) {
+    //场景值
+    utils.log('场景值：' + options.scene);
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
