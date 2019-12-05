@@ -1,3 +1,3 @@
 <!--packageManage/pages/map/map.wxml-->
-<map id="map" longitude="107.38779" latitude="29.70239" scale="14" subkey="RGXBZ-WKOKW-5F6RY-OVGZZ-64EGT-BOBTX" layer-style="1" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}"
+<map id="map" longitude="107.26402214721676" latitude="29.750130140836653" scale="14" subkey="RGXBZ-WKOKW-5F6RY-OVGZZ-64EGT-BOBTX" layer-style="1" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}"
   bindregionchange="regionchange" show-location style="width: 100%; height: 300px;"></map>

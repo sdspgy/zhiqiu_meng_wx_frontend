@@ -17,19 +17,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    utils.log('welcome-------onLoad');
-    // app.login();
+    app.isAuthor();
     // request.text('')
     //   .then((res) => {
     //     utils.showSuccess('success');
     //   });
 
+    /**
+     * 获取当前地址的经纬度，配合app.json
+     */
     // wx.getLocation({
     //   type: 'gcj02', //返回可以用于wx.openLocation的经纬度
     //   success(res) {
     //     const latitude = res.latitude 
     //     const longitude = res.longitude 
-    //     debugger
     //     wx.openLocation({
     //       latitude,
     //       longitude,
@@ -44,7 +45,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-    utils.log('welcome-------onReady');
+
   },
 
   /**
