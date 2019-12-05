@@ -2,6 +2,8 @@
 var utils = require('../../utils/util.js');
 var request = require('../../utils/request.js');
 import F2 from '@antv/wx-f2';
+//获取应用实例
+const app = getApp()
 Page({
 
   /**
@@ -15,10 +17,26 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    utils.log('welcome-------onLoad');
+    // app.login();
     // request.text('')
     //   .then((res) => {
     //     utils.showSuccess('success');
     //   });
+
+    // wx.getLocation({
+    //   type: 'gcj02', //返回可以用于wx.openLocation的经纬度
+    //   success(res) {
+    //     const latitude = res.latitude 
+    //     const longitude = res.longitude 
+    //     debugger
+    //     wx.openLocation({
+    //       latitude,
+    //       longitude,
+    //       scale: 18
+    //     })
+    //   }
+    // })
 
   },
 
@@ -26,7 +44,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-
+    utils.log('welcome-------onReady');
   },
 
   /**
@@ -75,6 +93,8 @@ Page({
    * @addEvent
    */
   addEvent: function(info) {
-
+    wx.navigateTo({
+      url: '../../packageManage/pages/map/map',
+    })
   }
 })

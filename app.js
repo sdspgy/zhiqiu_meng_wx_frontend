@@ -1,5 +1,6 @@
 //app.js
 import utils from './utils/util.js';
+import requests from './utils/request.js';
 App({
   onLaunch: function(options) {
     //场景值
@@ -8,13 +9,81 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
+    //判断是否已授权
+    this.isAuthor();
+  },
 
+  login: function() {
     // 登录
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        var code = res.code;
+        if (code) {
+          wx.getUserInfo({
+            success: (res) => {
+              wx.request({
+                url: requests.headUrl + '/wx/sys/login',
+                header: {
+                  'content-type': 'application/x-www-form-urlencoded'
+                },
+                method: 'post',
+                data: {
+                  encryptedData: res.encryptedData,
+                  iv: res.iv,
+                  code: code,
+                },
+                success: (e) => {
+                  if (e.data.code === 200) {
+                    wx.setStorageSync("token", e.data.token);
+                  } else {
+                    utils.log(e.data.msg)
+                  }
+                },
+                fail: function() {
+                  utils.log('请联系管理员')
+                }
+              })
+            }
+          })
+        }
       }
     })
+  },
+
+  isAuthor: function() {
+    wx.login({
+      success: info => {
+        const code = info.code;
+        if (code) {
+          wx.request({
+            url: requests.headUrl + '/wx/sys/isAuthor',
+            header: {
+              'content-type': 'application/x-www-form-urlencoded'
+            },
+            method: 'post',
+            data: {
+              code: code,
+            },
+            success: (e) => {
+              if (e.data.isAuthor) {
+                this.globalData.isAuthor
+                this.globalData.isAuthor = true;
+                this.globalData.isAuthor
+              } else {
+                utils.log(e.data.msg)
+              }
+            },
+            fail: function() {
+              utils.log('请联系管理员')
+            }
+          })
+        }
+      }
+    })
+  },
+
+  getUserInfo: function() {
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -36,7 +105,9 @@ App({
       }
     })
   },
+
   globalData: {
-    userInfo: null
+    userInfo: null,
+    isAuthor: false
   }
 })

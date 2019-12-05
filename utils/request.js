@@ -5,8 +5,12 @@
 
 var utils = require('util.js');
 
-const headUrl = 'http://127.0.0.1:8081/report/';
+const headUrl = 'http://127.0.0.1:9001/meng';
 
 export const text = (data) => {
-  return utils.axios('post', headUrl + 'api/queryCreatives', data)
+  return utils.axios('post', headUrl + '/api/queryCreatives', data)
+}
+
+module.exports = {
+  headUrl
 }
