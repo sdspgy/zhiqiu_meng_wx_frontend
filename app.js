@@ -67,9 +67,7 @@ App({
             },
             success: (e) => {
               if (e.data.isAuthor) {
-                this.globalData.isAuthor
                 this.globalData.isAuthor = true;
-                this.globalData.isAuthor
               } else {
                 utils.log(e.data.msg)
               }
