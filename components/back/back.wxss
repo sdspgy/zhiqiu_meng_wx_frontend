@@ -1,0 +1,18 @@
+.head {
+  height: 130rpx;
+  width: 100%;
+  background-color: #fff;
+}
+
+van-icon {
+  position: absolute;
+  top: 60rpx;
+  left: 30rpx;
+}
+
+.backTitle {
+  position: absolute;
+  top: 52rpx;
+  left: 45rpx;
+  font-size: 30rpx;
+}

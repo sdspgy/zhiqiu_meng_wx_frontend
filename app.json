@@ -2,13 +2,16 @@
   "pages": [
     "pages/welcome/welcome",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/menu/home",
+    "pages/menu/group",
+    "pages/menu/rank",
+    "pages/menu/my"
   ],
   "subpackages": [
     {
       "root": "packageManage",
       "pages": [
-        "pages/my/my",
         "pages/map/map"
       ]
     },
@@ -19,11 +22,39 @@
       ]
     }
   ],
+  "tabBar": {
+    "selectedColor": "#FFC0CB",
+    "color": "#ABABAB",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/menu/home",
+        "text": "首页",
+        "iconPath": "static/images/bi.png",
+        "selectedIconPath": "static/images/bi-select.png"
+      },
+      {
+        "pagePath": "pages/menu/group",
+        "text": "分类",
+        "iconPath": "static/images/group.png",
+        "selectedIconPath": "static/images/group.png"
+      },
+      {
+        "pagePath": "pages/menu/rank",
+        "text": "金榜",
+        "iconPath": "static/images/rank.png",
+        "selectedIconPath": "static/images/rank.png"
+      },
+      {
+        "pagePath": "pages/menu/my",
+        "text": "我的",
+        "iconPath": "static/images/my.png",
+        "selectedIconPath": "static/images/my.png"
+      }
+    ]
+  },
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationStyle": "custom"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",

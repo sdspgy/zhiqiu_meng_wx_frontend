@@ -1,4 +1,4 @@
-// packageManage/pages/my/my.js
+// pages/menu/rank.js
 Page({
 
   /**

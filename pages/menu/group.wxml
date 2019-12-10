@@ -1,0 +1,2 @@
+<!--pages/menu/group.wxml-->
+<back backTitle="{{backTitle}}" />

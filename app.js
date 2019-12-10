@@ -6,9 +6,9 @@ App({
     //场景值
     utils.log('场景值：' + options.scene);
     // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+    // var logs = wx.getStorageSync('logs') || []
+    // logs.unshift(Date.now())
+    // wx.setStorageSync('logs', logs)
     //判断是否已授权
     this.isAuthor();
   },

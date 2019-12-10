@@ -1,32 +1,19 @@
-// packageManage/pages/map/map.js
-var utils = require('../../../utils/util.js');
+// pages/menu/home.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    map: null,
-    backIcon: true,
-    backTitle: '地图'
+    backTitle: '首页'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    this.data.map = wx.createMapContext('map', this)
-  },
-
-  /**
-   * 获取当前地图中心的经纬度
-   */
-  getCenterLocation: function() {
-    this.data.map.getCenterLocation({
-      success: (res) => {
-        utils.log(res.longitude)
-        utils.log(res.latitude)
-      }
+    wx.setTabBarStyle({
+      borderStyle: "black",
     })
   },
 
@@ -79,23 +66,4 @@ Page({
 
   },
 
-  /**
-   * 返回上层
-   */
-  back: function() {
-    wx.redirectTo({
-      url: '../../../pages/welcome/welcome',
-    })
-  },
-
-  regionchange(e) {
-    this.getCenterLocation()
-    console.log(e.type)
-  },
-  markertap(e) {
-    console.log(e.markerId)
-  },
-  controltap(e) {
-    console.log(e.controlId)
-  }
 })
