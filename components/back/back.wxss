@@ -5,14 +5,14 @@
 }
 
 van-icon {
-  position: absolute;
+  position: relative;
   top: 60rpx;
   left: 30rpx;
 }
 
 .backTitle {
-  position: absolute;
-  top: 52rpx;
+  position: relative;
+  top: 50rpx;
   left: 45rpx;
   font-size: 30rpx;
 }

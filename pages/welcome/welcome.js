@@ -47,7 +47,6 @@ Page({
    */
   data: {
     // add: '医院'
-    backTitle: 'Welcome'
   },
 
   /**

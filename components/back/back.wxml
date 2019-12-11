@@ -1,4 +1,0 @@
-<view class="head">
-  <van-icon wx:if="{{backIcon}}" name="arrow-left" size="1.5em" bindtap="back" />
-  <text class="backTitle">{{backTitle}}</text>
-</view>

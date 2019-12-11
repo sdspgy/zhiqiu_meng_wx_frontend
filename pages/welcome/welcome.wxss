@@ -1,1 +1,6 @@
 /* pages/welcome/welcome.wxss */
+
+.welcome_top {
+  width: 100%;
+  margin-top: 120rpx;
+}

@@ -1,0 +1,4 @@
+<!--pages/search/search.wxml-->
+<back backTitle="{{backTitle}}" backIcon="backIcon" bind:back="back"/>
+
+

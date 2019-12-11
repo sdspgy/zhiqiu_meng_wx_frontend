@@ -1,11 +1,18 @@
 // pages/menu/home.js
+
+const conf = {
+  logoUrl: '../../static/images/logo.png',
+  work_img_lazyoad: true
+}
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-   
+    conf: conf,
+    works: []
   },
 
   /**
@@ -15,6 +22,21 @@ Page({
     wx.setTabBarStyle({
       borderStyle: "black",
     })
+
+    let works = [];
+    for (let i = 0; i < 100; i++) {
+      let workObj = new Object();
+      if (i % 2 == 0) {
+        workObj.url = '../../static/images/bi.png';
+      } else {
+        workObj.url = '../../static/images/logo.png';
+      }
+      works.push(workObj);
+    }
+    this.setData({
+      works: works
+    })
+
   },
 
   /**
@@ -66,4 +88,12 @@ Page({
 
   },
 
+  /**
+   * 搜索框Event
+   */
+  search: function(e) {
+    wx.navigateTo({
+      url: '../search/search',
+    })
+  }
 })

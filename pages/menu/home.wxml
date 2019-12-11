@@ -1,9 +1,16 @@
 <!--pages/menu/home.wxml-->
-<view class="home">
-  <van-image custom-class="custom" image-class="images" width="100" height="100" lazy-load src="https://img.yzcdn.cn/vant/cat.jpeg" />
-  <van-image width="100" height="100" src="../../static/images/bi.png" />
-
+<view class="head">
+  <view class="head_top">
+    <image bindtap="logo" class="logo" src="{{conf.logoUrl}}" mode="aspectFit"></image>
+    <view class="title">❤️一起快乐的写字吧</view>
+  </view>
+  <view class="seacher">
+    <van-icon name="search" color="grey" size="40rpx" />
+    <view>请输入要搜索的内容</view>
+  </view>
 </view>
-<van-icon name="chat" dot />
-<van-icon name="chat" info="9" />
-<van-icon name="chat" info="99+" />
+<view class="main">
+  <view class="works" wx:for="{{works}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+    <image class="work_img" src="{{item.url}}" lazy-load="{{work_img_lazyoad}}" mode="aspectFit" bindtap="workEvent"></image>
+  </view>
+</view>

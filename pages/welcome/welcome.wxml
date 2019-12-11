@@ -1,3 +1,5 @@
 <!--pages/welcome/welcome.wxml-->
-<van-cell custom-class title="地址" title-width="" icon="location-o" is-link="true" bind:click="addEvent" />
-<van-cell custom-class title="小程序" title-width="" icon="shop-o" is-link="true" bind:click="programEvent" />
+<view class="welcome_top">
+  <van-cell custom-class title="地址" title-width="" icon="location-o" is-link="true" bind:click="addEvent" />
+  <van-cell custom-class title="小程序" title-width="" icon="shop-o" is-link="true" bind:click="programEvent" />
+</view>

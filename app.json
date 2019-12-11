@@ -6,7 +6,8 @@
     "pages/menu/home",
     "pages/menu/group",
     "pages/menu/rank",
-    "pages/menu/my"
+    "pages/menu/my",
+    "pages/search/search"
   ],
   "subpackages": [
     {
@@ -48,14 +49,15 @@
       },
       {
         "pagePath": "pages/menu/my",
-        "text": "我的",
+        "text": "个人",
         "iconPath": "static/images/icon_API.png",
         "selectedIconPath": "static/images/icon_component_HL.png"
       }
     ]
   },
   "window": {
-    "navigationStyle": "custom"
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
