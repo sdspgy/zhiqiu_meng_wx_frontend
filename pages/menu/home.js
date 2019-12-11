@@ -26,10 +26,14 @@ Page({
     let works = [];
     for (let i = 0; i < 100; i++) {
       let workObj = new Object();
-      if (i % 2 == 0) {
+      if (i % 3 == 0) {
         workObj.url = '../../static/images/bi.png';
+        workObj.text = "北柒书画";
+        workObj.name = "北柒-知秋";
       } else {
         workObj.url = '../../static/images/logo.png';
+        workObj.text = '北柒书画66北柒书画北柒书画北柒书画北柒书画北柒书画北北柒书画北柒书画北北柒书画北柒书画北北柒书画北柒书画北柒书画';
+        workObj.name = "北柒-阿暖";
       }
       works.push(workObj);
     }

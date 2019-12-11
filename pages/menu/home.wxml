@@ -1,7 +1,7 @@
 <!--pages/menu/home.wxml-->
 <view class="head">
   <view class="head_top">
-    <image bindtap="logo" class="logo" src="{{conf.logoUrl}}" mode="aspectFit"></image>
+    <image bindtap="logoEvent" class="logo" src="{{conf.logoUrl}}" mode="aspectFit"></image>
     <view class="title">❤️一起快乐的写字吧</view>
   </view>
   <view class="seacher">
@@ -11,6 +11,13 @@
 </view>
 <view class="main">
   <view class="works" wx:for="{{works}}" wx:for-index="index" wx:for-item="item" wx:key="index">
-    <image class="work_img" src="{{item.url}}" lazy-load="{{work_img_lazyoad}}" mode="aspectFit" bindtap="workEvent"></image>
+    <image bindtap="workEvent" class="work_img" src="{{item.url}}" lazy-load="{{work_img_lazyoad}}" mode="aspectFit" bindtap="workEvent"></image>
+    <view class="work_text">
+      <text>{{item.text}}</text>
+    </view>
+    <view class="work_user">
+      <image class="user_logo" src="{{conf.logoUrl}}" mode="aspectFit"></image>
+      <view class="user_name">{{item.name}}</view>
+    </view>
   </view>
 </view>

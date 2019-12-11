@@ -61,23 +61,28 @@ van-icon {
 
 .main {
   position: absolute;
-  top: 18%;
+  top: 240rpx;
   width: 100%;
   /* 弹性布局 */
-  display: flex;
+  /* display: flex; */
   /* 横行排列 */
-  flex-direction: row;
+  /* flex-direction: row; */
   /* 换行 */
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  /* 当前行的侧轴（纵轴）方向上的对齐方式 */
+  /* align-items: flex-start; */
   /* 间隔 */
-  justify-content: space-around;
+  /* justify-content: space-around; */
+   column-count:2;
+   column-gap: 0;
+    right: 5rpx; 
 }
 
 .works {
-  width: 47%;
-  height: 500rpx;
+  break-inside: avoid;
+  /* width: 48%; */
   background-color: #fafafa;
-  margin: 12rpx 2rpx 2rpx 2rpx;
+  margin: 12rpx 0rpx 12rpx 12rpx;
   border-radius: 20rpx;
   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1), 0 1px rgba(0, 0, 0, 0.1);
 }
@@ -85,5 +90,30 @@ van-icon {
 .work_img {
   border-radius: 20rpx 20rpx 0 0;
   width: 100%;
-  height: 71%;
+  height: 362rpx;
+}
+
+.work_text {
+  margin: 15rpx 5rpx 5rpx 15rpx;
+  color: black;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.work_user {
+  display: flex;
+}
+
+.user_logo {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 18rpx 25rpx 5rpx 10rpx;
+  border-radius: 50%;
+}
+
+.user_name {
+  caret-color: silver;
+  font-size: 8px;
+  align-content: center;
+  line-height: 75rpx;
 }
