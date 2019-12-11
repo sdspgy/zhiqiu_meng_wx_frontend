@@ -2,6 +2,20 @@
 
 .home {
   width: 100%;
-  height: 50rpx;
-  background-color: red;
+  height: 200rpx;
+}
+
+custom {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+van-image {
+  width: 10rpx;
+  height: 10rpx;
+}
+
+images {
+  width: 100rpx;
+  height: 100rpx;
 }

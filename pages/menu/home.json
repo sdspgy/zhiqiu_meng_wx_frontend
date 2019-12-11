@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "back": "../../components/back/back"
+    "ff-canvas": "@antv/f2-canvas",
+    "van-cell": "@vant/weapp/image/index",
+    "van-icon": "@vant/weapp/icon/index"
   }
 }

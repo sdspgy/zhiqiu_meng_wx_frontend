@@ -1,2 +1,9 @@
 <!--pages/menu/home.wxml-->
-<back backTitle="{{backTitle}}" />
+<view class="home">
+  <van-image custom-class="custom" image-class="images" width="100" height="100" lazy-load src="https://img.yzcdn.cn/vant/cat.jpeg" />
+  <van-image width="100" height="100" src="../../static/images/bi.png" />
+
+</view>
+<van-icon name="chat" dot />
+<van-icon name="chat" info="9" />
+<van-icon name="chat" info="99+" />

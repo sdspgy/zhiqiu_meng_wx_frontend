@@ -23,33 +23,34 @@
     }
   ],
   "tabBar": {
-    "selectedColor": "#FFC0CB",
-    "color": "#ABABAB",
+    "selectedColor": "#3cc51f",
+    "color": "#7A7E83",
     "borderStyle": "white",
+    "backgroundColor": "#ffffff",
     "list": [
       {
         "pagePath": "pages/menu/home",
         "text": "首页",
-        "iconPath": "static/images/bi.png",
-        "selectedIconPath": "static/images/bi-select.png"
+        "iconPath": "static/images/icon_API.png",
+        "selectedIconPath": "static/images/icon_component_HL.png"
       },
       {
         "pagePath": "pages/menu/group",
         "text": "分类",
-        "iconPath": "static/images/group.png",
-        "selectedIconPath": "static/images/group.png"
+        "iconPath": "static/images/icon_API.png",
+        "selectedIconPath": "static/images/icon_component_HL.png"
       },
       {
         "pagePath": "pages/menu/rank",
         "text": "金榜",
-        "iconPath": "static/images/rank.png",
-        "selectedIconPath": "static/images/rank.png"
+        "iconPath": "static/images/icon_API.png",
+        "selectedIconPath": "static/images/icon_component_HL.png"
       },
       {
         "pagePath": "pages/menu/my",
         "text": "我的",
-        "iconPath": "static/images/my.png",
-        "selectedIconPath": "static/images/my.png"
+        "iconPath": "static/images/icon_API.png",
+        "selectedIconPath": "static/images/icon_component_HL.png"
       }
     ]
   },
