@@ -50,6 +50,15 @@ function axios(method, url, data) {
 }
 
 /**
+ * 返回上一层
+ */
+export function back() {
+  wx.navigateBack({
+    delta: 1
+  })
+}
+
+/**
  * showSuccess
  */
 function showSuccess(text) {

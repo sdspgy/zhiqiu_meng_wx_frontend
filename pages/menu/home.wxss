@@ -6,7 +6,7 @@
   background-color: #fafafa;
   padding-top: 5%;
   width: 100%;
-  height: 200rpx;
+  height: 210rpx;
   color: black;
   /* border-bottom: 0.5rpx solid #c2c2c2; */
   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1), 0 1px rgba(0, 0, 0, 0.1);
@@ -59,28 +59,74 @@ van-icon {
   margin: 6rpx 120rpx 0 15rpx;
 }
 
+.head_tag {
+  margin: 10rpx 5rpx 5rpx 25rpx;
+}
+
+.head_sign {
+  display: flex;
+  position: relative;
+  left: 35%;
+  top: -45rpx;
+  height: 50rpx;
+}
+
+.sign_num {
+  background-color: #969696;
+  width: 20rpx;
+  height: 40rpx;
+  margin-right: 2rpx;
+  color: #fafafa;
+  font-size: 20rpx;
+  line-height: 40rpx;
+  border-radius: 4rpx;
+  text-align: center;
+}
+
+.sign_text {
+  height: 40rpx;
+  font-size: 20rpx;
+  margin-top: 10rpx;
+  text-align: center;
+}
+
+swiper {
+  margin-left: 40rpx;
+  height: 40rpx;
+  width: 220rpx;
+  border-radius: 8rpx;
+  background-color: #ffaeb9;
+}
+
+.swiper {
+  font-size: 10px;
+  text-align: center;
+  line-height: 40rpx;
+  width: 220rpx;
+  height: 40rpx;
+  border-radius: 8rpx;
+  background-color: #ffaeb9;
+}
+
 .main {
   position: absolute;
-  top: 240rpx;
+  top: 255rpx;
   width: 100%;
-  /* 弹性布局 */
-  /* display: flex; */
-  /* 横行排列 */
-  /* flex-direction: row; */
-  /* 换行 */
-  /* flex-wrap: wrap; */
-  /* 当前行的侧轴（纵轴）方向上的对齐方式 */
-  /* align-items: flex-start; */
-  /* 间隔 */
-  /* justify-content: space-around; */
-   column-count:2;
-   column-gap: 0;
-    right: 5rpx; 
+  /* 弹性布局 *//* display: flex; *//* 横行排列 *//* flex-direction: row; *//* 换行 *//* flex-wrap: wrap; *//* 当前行的侧轴（纵轴）方向上的对齐方式 *//* align-items: flex-start; *//* 间隔 *//* justify-content: space-around; */
+  right: 5rpx;
+}
+
+#scroll {
+  height: 1500rpx;
+}
+
+.main_scroll {
+  column-count: 2;
+  column-gap: 0;
 }
 
 .works {
   break-inside: avoid;
-  /* width: 48%; */
   background-color: #fafafa;
   margin: 12rpx 0rpx 12rpx 12rpx;
   border-radius: 20rpx;
@@ -90,7 +136,6 @@ van-icon {
 .work_img {
   border-radius: 20rpx 20rpx 0 0;
   width: 100%;
-  height: 362rpx;
 }
 
 .work_text {
@@ -116,4 +161,22 @@ van-icon {
   font-size: 8px;
   align-content: center;
   line-height: 75rpx;
+}
+
+.love {
+  position: relative;
+  top: -4rpx;
+  left: 100rpx;
+}
+
+.user_charm {
+  caret-color: silver;
+  font-size: 8px;
+  align-content: center;
+  line-height: 75rpx;
+}
+
+.work_load {
+  position: relative;
+  left: 45%;
 }

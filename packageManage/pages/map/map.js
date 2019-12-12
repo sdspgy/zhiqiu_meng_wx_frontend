@@ -83,8 +83,8 @@ Page({
    * 返回上层
    */
   back: function() {
-    wx.redirectTo({
-      url: '../../../pages/welcome/welcome',
+    wx.navigateBack({
+      delta: 1
     })
   },
 

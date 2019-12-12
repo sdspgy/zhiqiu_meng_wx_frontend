@@ -1,4 +1,3 @@
 <!--pages/search/search.wxml-->
-<back backTitle="{{backTitle}}" backIcon="backIcon" bind:back="back"/>
-
-
+<back backTitle="{{backTitle}}" backIcon="backIcon" bind:back="back" />
+<van-search bind:search="searchEvent" value="{{value}}" left-icon="search" use-left-icon-slot input-align="center" placeholder="请输入搜索关键词" />

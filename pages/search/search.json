@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-        "back": "../../components/back/back"
+    "back": "../../components/back/back",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-search": "@vant/weapp/search/index"
   }
 }

@@ -1,10 +1,10 @@
 .head {
   height: 130rpx;
   width: 100%;
-  background-color: #fff;
+  background-color: #fafafa;
 }
 
-van-icon {
+.van_icon {
   position: relative;
   top: 60rpx;
   left: 30rpx;

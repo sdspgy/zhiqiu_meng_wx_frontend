@@ -4,20 +4,41 @@
     <image bindtap="logoEvent" class="logo" src="{{conf.logoUrl}}" mode="aspectFit"></image>
     <view class="title">❤️一起快乐的写字吧</view>
   </view>
-  <view class="seacher">
+  <view class="seacher" bindtap="searchEvent">
     <van-icon name="search" color="grey" size="40rpx" />
     <view>请输入要搜索的内容</view>
   </view>
-</view>
-<view class="main">
-  <view class="works" wx:for="{{works}}" wx:for-index="index" wx:for-item="item" wx:key="index">
-    <image bindtap="workEvent" class="work_img" src="{{item.url}}" lazy-load="{{work_img_lazyoad}}" mode="aspectFit" bindtap="workEvent"></image>
-    <view class="work_text">
-      <text>{{item.text}}</text>
-    </view>
-    <view class="work_user">
-      <image class="user_logo" src="{{conf.logoUrl}}" mode="aspectFit"></image>
-      <view class="user_name">{{item.name}}</view>
-    </view>
+  <van-tag bindtap="newOrHotEvent" data-most="0" custom-class="head_tag" size="medium" round type="primary">最新</van-tag>
+  <van-tag bindtap="newOrHotEvent" data-most="1" custom-class="head_tag" size="medium" round type="success">最热</van-tag>
+  <view class="head_sign">
+    <view class="sign_num" wx:for="{{sign}}" wx:for-index="index" wx:for-item="item" wx:key="index">{{item}}</view>
+    <view class="sign_text">人今日签到</view>
+    <swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{indicatorDots}}" vertical="{{vertical}}">
+      <block wx:for="{{sign}}" wx:key="{{index}}">
+        <swiper-item>
+          <view class="swiper">{{item}}</view>
+        </swiper-item>
+      </block>
+    </swiper>
   </view>
+</view>
+
+<view class="main">
+  <scroll-view id="scroll" lower-threshold="50" bindscrolltolower="bottomEvent" scroll-y="true">
+    <view class="main_scroll">
+      <view class="works" wx:for="{{works}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+        <image bindtap="workEvent" data-workId="item.workId" class="work_img" src="{{item.url}}" lazy-load="{{work_img_lazyoad}}" mode="aspectFill"></image>
+        <view class="work_text">
+          <text>{{item.text}}</text>
+        </view>
+        <view class="work_user">
+          <image class="user_logo" src="{{conf.logoUrl}}" mode="aspectFit"></image>
+          <view class="user_name">{{item.name}}</view>
+          <van-icon custom-class="love" name="like" color="red" size="30rpx" />
+          <view class="user_charm">23344</view>
+        </view>
+      </view>
+    </view>
+    <van-loading wx:if="{{workLoadShow}}" custom-class="work_load" type="spinner" color="#1989fa" />
+  </scroll-view>
 </view>

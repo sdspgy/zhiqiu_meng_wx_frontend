@@ -1,4 +1,6 @@
 // pages/menu/home.js
+var utils = require('../../utils/util.js');
+var request = require('../../utils/request.js');
 
 const conf = {
   logoUrl: '../../static/images/logo.png',
@@ -12,7 +14,16 @@ Page({
    */
   data: {
     conf: conf,
-    works: []
+    works: [],
+    workLoadShow: false,
+    sign: ['2', '3', '3', '6', '3'],
+
+    autoplay: true,
+    indicatorDots: true,
+    vertical: true,
+    interval: 5000,
+    duration: 1000,
+
   },
 
   /**
@@ -24,16 +35,18 @@ Page({
     })
 
     let works = [];
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 10; i++) {
       let workObj = new Object();
       if (i % 3 == 0) {
         workObj.url = '../../static/images/bi.png';
         workObj.text = "北柒书画";
         workObj.name = "北柒-知秋";
+        workObj.workId = i;
       } else {
         workObj.url = '../../static/images/logo.png';
-        workObj.text = '北柒书画66北柒书画北柒书画北柒书画北柒书画北柒书画北北柒书画北柒书画北北柒书画北柒书画北北柒书画北柒书画北柒书画';
+        workObj.text = '北柒书画66北柒书画北柒书画北柒书画北柒书画北柒书画北北柒书画北柒书画北北柒书画北柒书画北北柒书画';
         workObj.name = "北柒-阿暖";
+        workObj.workId = i;
       }
       works.push(workObj);
     }
@@ -93,11 +106,42 @@ Page({
   },
 
   /**
-   * 搜索框Event
+   * 搜索框
    */
-  search: function(e) {
+  searchEvent: function() {
     wx.navigateTo({
       url: '../search/search',
     })
+  },
+
+  /**
+   * 热 1
+   * 新 0
+   */
+  newOrHotEvent: function(e) {
+
+  },
+
+  /**
+   * 每个作品图片
+   */
+  workEvent: function(e) {
+
+  },
+
+  /**
+   * 滑块底部
+   */
+  bottomEvent: function() {
+    this.setData({
+      workLoadShow: true
+    })
+    // let works = this.data.works;
+    // works = this.data.works.concat(works);
+    // this.setData({
+    //   works: works,
+    //   workLoadShow: false
+    // })
   }
+
 })
