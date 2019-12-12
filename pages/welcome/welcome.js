@@ -47,6 +47,20 @@ Page({
    */
   data: {
     // add: '医院'
+    autoplay: true,
+    indicatorDots: true,
+    interval: 10000,
+    duration: 500,
+    imgs: [{
+      url: '../../static/images/lyf-11-28-1.jpg'
+      },
+      {
+        url: '../../static/images/lyf-5.jpg'
+      },
+      {
+        url: '../../static/images/mo.png'
+      },
+    ]
   },
 
   /**

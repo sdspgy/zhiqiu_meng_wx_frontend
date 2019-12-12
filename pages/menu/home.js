@@ -17,6 +17,7 @@ Page({
     works: [],
     workLoadShow: false,
     sign: ['2', '3', '3', '6', '3'],
+    news: ['北柒-知秋：刚刚打卡成功', '北柒-知秋：刚刚打6卡成功', '北柒-知6秋：刚刚打卡成功', '6北柒-知秋：刚刚打卡成功6'],
 
     autoplay: true,
     indicatorDots: true,
