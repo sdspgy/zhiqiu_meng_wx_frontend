@@ -28,20 +28,20 @@ swiper {
   height: 900rpx;
   width: 86%;
   margin: 20rpx auto;
-  border-radius: 8rpx;
+  border-radius: 8rpx 8rpx 8rpx 8rpx;
 }
 
 .imgs {
   width: 100%;
   height: 100%;
-  border-radius: 10rpx 10rpx 10rpx 10rpx;
+  /* border-radius: 10rpx 10rpx 10rpx 10rpx; */
   overflow: hidden;
 }
 
 .swiper {
-  width: 100%;
+  width: 97%;
   height: 15%;
-  border-radius: 0 0 10rpx 10rpx;
+  border-radius: 10rpx 10rpx 10rpx 10rpx;
   background-color: rgba(0, 0, 0, 0.50);
   color: #fff;
   font-size: 12px;

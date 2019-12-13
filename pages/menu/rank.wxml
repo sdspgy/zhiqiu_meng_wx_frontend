@@ -2,12 +2,15 @@
 <back backTitle="{{backTitle}}" />
 <van-tabs animated swipeable color="#1E90FF" line-width='15' line-height='2' active="{{ active }}" bind:change="onChange">
   <van-tab wx:for="{{titles}}" wx:key="index" title="{{item.title}}">
-    <view class="main" wx:for="{{item.work}}" wx:for-item="info">
+    <view class="main" wx:for="{{item.work}}" wx:for-item="info" wx:key="index">
       <view class="main_title">{{info.name}}</view>
       <scroll-view id="scroll" scroll-y="true">
         <view class="heads_body">
           <view class="head_body" wx:for="{{info.works}}" wx:for-item="data" wx:key="index">
-            <image bindtap="workImgEvent" data-workId="{{data.workId}}" class="work_img" src="{{data.url}}" lazy-load mode="aspectFill"></image>
+            <view class="veil">
+              <image bindtap="workImgEvent" data-workId="{{data.workId}}" class="work_img" src="{{data.url}}" lazy-load mode="aspectFill">
+              </image>
+            </view>
             <view class="head_body_text">
               <view>{{data.author}}</view>
               <view>{{data.text}}</view>

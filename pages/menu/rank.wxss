@@ -1,5 +1,10 @@
 /* pages/menu/rank.wxss */
 
+van-tabs {
+  position: relative;
+  top: 130rpx;
+}
+
 .main {
   width: 90%;
   height: 600rpx;
@@ -37,10 +42,18 @@
   display: flex;
 }
 
-.work_img {
+.veil {
   height: 150rpx;
   width: 70%;
   border-radius: 10rpx 10rpx;
+  background-color: black;
+}
+
+.work_img {
+  height: 150rpx;
+  width: 100%;
+  border-radius: 10rpx 10rpx;
+  opacity: 0.6;
 }
 
 .head_body_text {

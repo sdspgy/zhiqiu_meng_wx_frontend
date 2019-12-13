@@ -13,99 +13,17 @@ Page({
         work: [{
           name: '上周浏览排名',
           works: [{
-              url: '../../static/images/bi.png',
-              author: '北柒-知秋',
-              text: '688人浏览'
-            },
-            {
-              url: '../../static/images/bi.png',
-              author: '北柒-知秋',
-              text: '688人浏览'
-            },
-            {
-              url: '../../static/images/bi.png',
-              author: '北柒-知秋',
-              text: '688人浏览'
-            },
-            {
-              url: '../../static/images/bi.png',
-              author: '北柒-知秋',
-              text: '688人浏览'
-            },
-            {
-              url: '../../static/images/bi.png',
-              author: '北柒-知秋',
-              text: '688人浏览'
-            },
-            {
-              url: '../../static/images/bi.png',
-              author: '北柒-知秋',
-              text: '688人浏览'
-            },
-            {
-              url: '../../static/images/bi.png',
-              author: '北柒-知秋',
-              text: '688人浏览'
-            },
-            {
-              url: '../../static/images/bi.png',
-              author: '北柒-知秋',
-              text: '688人浏览'
-            },
-            {
-              url: '../../static/images/bi.png',
-              author: '北柒-知秋',
-              text: '688人浏览'
-            }
-          ]
+            url: '../../static/images/logo.png',
+            author: '北柒-知秋',
+            text: '688人浏览'
+          }]
         }, {
           name: '上周获赞排名',
           works: [{
-              url: '../../static/images/bi.png',
-              author: '北柒-知秋',
-              text: '688人浏览'
-            },
-            {
-              url: '../../static/images/bi.png',
-              author: '北柒-知秋',
-              text: '688人浏览'
-            },
-            {
-              url: '../../static/images/bi.png',
-              author: '北柒-知秋',
-              text: '688人浏览'
-            },
-            {
-              url: '../../static/images/bi.png',
-              author: '北柒-知秋',
-              text: '688人浏览'
-            },
-            {
-              url: '../../static/images/bi.png',
-              author: '北柒-知秋',
-              text: '688人浏览'
-            },
-            {
-              url: '../../static/images/bi.png',
-              author: '北柒-知秋',
-              text: '688人浏览'
-            },
-            {
-              url: '../../static/images/bi.png',
-              author: '北柒-知秋',
-              text: '688人浏览'
-            },
-            {
-              url: '../../static/images/bi.png',
-              author: '北柒-知秋',
-              text: '688人浏览'
-            },
-            {
-              url: '../../static/images/bi.png',
-              author: '北柒-知秋',
-              text: '688人浏览'
-            }
-          ]
+            url: '../../static/images/logo.png',
+            author: '北柒-知秋',
+            text: '688人浏览'
+          }]
         }]
       },
       {
@@ -113,47 +31,13 @@ Page({
         work: [{
             name: '上周签到之星',
             works: [{
-                url: '../../static/images/bi.png',
+                url: '../../static/images/logo.png',
                 author: '北柒-知秋',
                 text: '688人浏览'
               },
+
               {
-                url: '../../static/images/bi.png',
-                author: '北柒-知秋',
-                text: '688人浏览'
-              },
-              {
-                url: '../../static/images/bi.png',
-                author: '北柒-知秋',
-                text: '688人浏览'
-              },
-              {
-                url: '../../static/images/bi.png',
-                author: '北柒-知秋',
-                text: '688人浏览'
-              },
-              {
-                url: '../../static/images/bi.png',
-                author: '北柒-知秋',
-                text: '688人浏览'
-              },
-              {
-                url: '../../static/images/bi.png',
-                author: '北柒-知秋',
-                text: '688人浏览'
-              },
-              {
-                url: '../../static/images/bi.png',
-                author: '北柒-知秋',
-                text: '688人浏览'
-              },
-              {
-                url: '../../static/images/bi.png',
-                author: '北柒-知秋',
-                text: '688人浏览'
-              },
-              {
-                url: '../../static/images/bi.png',
+                url: '../../static/images/logo.png',
                 author: '北柒-知秋',
                 text: '688人浏览'
               }
@@ -161,100 +45,18 @@ Page({
           }, {
             name: '上周勤劳之星',
             works: [{
-                url: '../../static/images/bi.png',
-                author: '北柒-知秋',
-                text: '688人浏览'
-              },
-              {
-                url: '../../static/images/bi.png',
-                author: '北柒-知秋',
-                text: '688人浏览'
-              },
-              {
-                url: '../../static/images/bi.png',
-                author: '北柒-知秋',
-                text: '688人浏览'
-              },
-              {
-                url: '../../static/images/bi.png',
-                author: '北柒-知秋',
-                text: '688人浏览'
-              },
-              {
-                url: '../../static/images/bi.png',
-                author: '北柒-知秋',
-                text: '688人浏览'
-              },
-              {
-                url: '../../static/images/bi.png',
-                author: '北柒-知秋',
-                text: '688人浏览'
-              },
-              {
-                url: '../../static/images/bi.png',
-                author: '北柒-知秋',
-                text: '688人浏览'
-              },
-              {
-                url: '../../static/images/bi.png',
-                author: '北柒-知秋',
-                text: '688人浏览'
-              },
-              {
-                url: '../../static/images/bi.png',
-                author: '北柒-知秋',
-                text: '688人浏览'
-              }
-            ]
+              url: '../../static/images/logo.png',
+              author: '北柒-知秋',
+              text: '688人浏览'
+            }]
           },
           {
             name: '上周努力之星',
             works: [{
-                url: '../../static/images/bi.png',
-                author: '北柒-知秋',
-                text: '688人浏览'
-              },
-              {
-                url: '../../static/images/bi.png',
-                author: '北柒-知秋',
-                text: '688人浏览'
-              },
-              {
-                url: '../../static/images/bi.png',
-                author: '北柒-知秋',
-                text: '688人浏览'
-              },
-              {
-                url: '../../static/images/bi.png',
-                author: '北柒-知秋',
-                text: '688人浏览'
-              },
-              {
-                url: '../../static/images/bi.png',
-                author: '北柒-知秋',
-                text: '688人浏览'
-              },
-              {
-                url: '../../static/images/bi.png',
-                author: '北柒-知秋',
-                text: '688人浏览'
-              },
-              {
-                url: '../../static/images/bi.png',
-                author: '北柒-知秋',
-                text: '688人浏览'
-              },
-              {
-                url: '../../static/images/bi.png',
-                author: '北柒-知秋',
-                text: '688人浏览'
-              },
-              {
-                url: '../../static/images/bi.png',
-                author: '北柒-知秋',
-                text: '688人浏览'
-              }
-            ]
+              url: '../../static/images/logo.png',
+              author: '北柒-知秋',
+              text: '688人浏览'
+            }]
           }
         ]
       }
@@ -267,15 +69,36 @@ Page({
    */
   onLoad: function(options) {
 
-    let works = [];
-    for (let i = 0; i < 10; i++) {
-      let i = new Object();
-      i.url = '../../static/images/bieqi.png';
-      i.author = '北柒-知秋';
-      i.text = "8888人浏览";
-      works.push = i;
-    }
-    debugger
+    let works = [{
+        url: '../../static/images/logo.png',
+        author: '北柒-知秋',
+        text: "8888人浏览"
+      }, {
+        url: '../../static/images/logo.png',
+        author: '北柒-知秋',
+        text: "8888人浏览"
+      }, {
+        url: '../../static/images/logo.png',
+        author: '北柒-知秋',
+        text: "8888人浏览"
+      },
+      {
+        url: '../../static/images/logo.png',
+        author: '北柒-知秋',
+        text: "8888人浏览"
+      }
+    ];
+    // let i = 0
+    // for (i; i < 10; i++) {
+    //   let s = {};
+    //   s.url = '../../static/images/bieqi.png';
+    //   s.author = '北柒-知秋';
+    //   s.text = "8888人浏览";
+    //   works.push = s;
+    // }
+    // debugger
+
+
     this.data.titles[0].work[0].works = works;
     this.data.titles[0].work[1].works = works;
     this.data.titles[1].work[0].works = works;
@@ -341,7 +164,7 @@ Page({
    */
   onChange(event) {
     wx.showToast({
-      title: `切换到标签 ${event.detail.name}`,
+      title: `${event.detail.name}`,
       icon: 'none'
     });
   }

@@ -1,5 +1,10 @@
 /* pages/search/search.wxss */
 
+.search {
+  position: relative;
+  top: 130rpx;
+}
+
 .tag {
   margin-left: 16rpx;
 }

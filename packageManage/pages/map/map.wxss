@@ -1,1 +1,6 @@
 /* packageManage/pages/map/map.wxss */
+
+#map {
+  position: relative;
+  top: 130rpx;
+}

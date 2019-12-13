@@ -1,7 +1,11 @@
 <!--pages/search/search.wxml-->
 <back backTitle="{{backTitle}}" backIcon="backIcon" bind:back="back" />
-<van-search bind:search="searchEvent" value="{{value}}" left-icon="search" use-left-icon-slot input-align="center" placeholder="请输入搜索关键词" />
-<van-divider contentPosition="left" fontSize="16">历史记录</van-divider>
-<van-tag bindtap="historyEvent" data-index="index" wx:for="{{conf.tagColor}}" wx:key="index" class="tag" plain size="medium" type="{{item}}">历史</van-tag>
-<van-divider contentPosition="left" fontSize="16" customStyle="color: #1989fa; border-color: #1989fa;">热门搜索</van-divider>
-<van-tag bindtap="hotEvent" data-index="index" wx:for="{{conf.tagColor}}" wx:key="index" class="tag" round size="medium" type="primary">热门</van-tag>
+<view class="search">
+  <van-search bind:search="searchEvent" value="{{value}}" left-icon="search" use-left-icon-slot input-align="center" placeholder="请输入搜索关键词" />
+
+  <van-divider contentPosition="left" fontSize="16">历史记录</van-divider>
+  <van-tag bindtap="historyEvent" data-index="index" wx:for="{{conf.tagColor}}" wx:key="index" class="tag" plain size="medium" type="{{item}}">历史</van-tag>
+
+  <van-divider contentPosition="left" fontSize="16" customStyle="color: #1989fa; border-color: #1989fa;">热门搜索</van-divider>
+  <van-tag bindtap="hotEvent" data-index="index" wx:for="{{conf.tagColor}}" wx:key="index" class="tag" round size="medium" type="{{item}}">热门</van-tag>
+</view>

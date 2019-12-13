@@ -93,7 +93,7 @@ swiper {
   width: 220rpx;
   height: 40rpx;
   border-radius: 8rpx;
-  background-color: #ffaeb9;
+  background-color: #1e90ff;
 }
 
 .main {
@@ -138,9 +138,9 @@ swiper {
 }
 
 .user_logo {
-  width: 40rpx;
-  height: 40rpx;
-  margin: 18rpx 25rpx 5rpx 10rpx;
+  width: 65rpx;
+  height: 65rpx;
+  margin: 10rpx 10rpx 5rpx 10rpx;
   border-radius: 50%;
 }
 
@@ -149,13 +149,13 @@ swiper {
   font-size: 8px;
   align-content: center;
   line-height: 75rpx;
-  width: 30%;
+  width: 200rpx;
 }
 
 .love {
   position: relative;
-  top: -4rpx;
-  left: 30rpx;
+  top: -2rpx;
+  left: 60rpx;
 }
 
 .user_charm {
@@ -163,6 +163,7 @@ swiper {
   font-size: 8px;
   align-content: center;
   line-height: 75rpx;
+  width: 100rpx;
 }
 
 .work_load {

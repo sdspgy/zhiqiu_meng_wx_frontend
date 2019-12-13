@@ -52,13 +52,13 @@ Page({
     interval: 10000,
     duration: 500,
     imgs: [{
-      url: '../../static/images/lyf-11-28-1.jpg'
+      url: '../../static/images/logo.png'
       },
       {
-        url: '../../static/images/lyf-5.jpg'
+        url: '../../static/images/logo.png'
       },
       {
-        url: '../../static/images/mo.png'
+        url: '../../static/images/logo.png'
       },
     ]
   },

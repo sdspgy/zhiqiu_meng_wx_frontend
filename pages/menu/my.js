@@ -22,14 +22,14 @@ Page({
       {
         title: '作品',
         text: '3',
-        color: 'linear-gradient(#87CEFF 0%, #87CEFA 80%)',
+        color: 'linear-gradient(#E066FF 0%, #DA70D6 80%)',
         icon: true
       },
       {
-        title: '粉丝',
-        text: '344',
-        color: 'linear-gradient(#00C5CD 0%, #00CED1 80%)',
-        icon: true
+        title: '更多',
+        text: '...',
+        color: 'linear-gradient(#87CEFF 0%, #87CEFA 80%)',
+        icon: false
       },
       {
         title: '关注',
@@ -37,11 +37,12 @@ Page({
         color: 'linear-gradient(#9F79EE 0%, #AB82FF 80%)',
         icon: true
       },
+
       {
-        title: '更多',
-        text: '...',
-        color: 'linear-gradient(#E066FF 0%, #DA70D6 80%)',
-        icon: false
+        title: '粉丝',
+        text: '344',
+        color: 'linear-gradient(#00C5CD 0%, #00CED1 80%)',
+        icon: true
       }
     ]
   },
