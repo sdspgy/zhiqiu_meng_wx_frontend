@@ -16,18 +16,6 @@
   display: flex;
 }
 
-/* .head_top:after {
-  width: 140%;
-  height: 100px;
-  position: absolute;
-  left: -20%;
-  top: 0;
-  z-index: -1;
-  content: '';
-  border-radius: 0 0 50% 50%;
-  background: linear-gradient(#2cbaf9, #04a9f4);
-} */
-
 .logo {
   width: 80rpx;
   height: 80rpx;
