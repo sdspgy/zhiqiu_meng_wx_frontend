@@ -1,1 +1,5 @@
 /* pages/search/search.wxss */
+
+.tag {
+  margin-left: 16rpx;
+}

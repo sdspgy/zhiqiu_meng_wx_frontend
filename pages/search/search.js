@@ -1,13 +1,17 @@
 // pages/search/search.js
+const conf = {
+  tagColor: ['primary', 'success', 'danger', 'warning']
+}
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    conf: conf,
     backTitle: '搜索',
     backIcon: true,
-    value: ''
+    value: '',
   },
 
   /**
@@ -77,5 +81,19 @@ Page({
    */
   searchEvent: function(e) {
     debugger
+  },
+
+  /**
+   * 历史
+   */
+  historyEvent: function(e) {
+
+  },
+
+  /**
+   * 热门
+   */
+  hotEvent: function(e) {
+
   }
 })

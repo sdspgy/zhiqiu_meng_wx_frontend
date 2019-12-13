@@ -67,7 +67,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    app.isAuthor();
+    // app.isAuthor();
 
     // 实例化API核心类
     // qqmapsdk = new QQMapWX({

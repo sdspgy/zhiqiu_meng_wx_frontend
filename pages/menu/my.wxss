@@ -1,1 +1,83 @@
 /* pages/menu/my.wxss */
+
+.top {
+  width: 100%;
+  height: 235rpx;
+  /* background: linear-gradient(rgb(40, 106, 255) 0%, rgb(17, 183, 242) 80%); */
+}
+
+.top:after {
+  width: 140%;
+  height: 34%;
+  position: absolute;
+  left: -20%;
+  top: 0;
+  z-index: -1;
+  content: '';
+  border-radius: 0 0 50% 50%;
+  background-color: rgb(17, 183, 242);
+}
+
+.userInfo {
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  margin-top: 55rpx;
+  margin-left: 15rpx;
+}
+
+.logo {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.user_name {
+  color: #fafafa;
+  width: 500rpx;
+  height: 80rpx;
+  margin-left: 20rpx;
+  font-size: 12px;
+  align-content: center;
+  margin: 12rpx 4rpx;
+}
+
+.motto {
+  margin-top: 10rpx;
+  color: #ccc;
+  font-size: 10px;
+}
+
+.set {
+  float: right;
+  position: absolute;
+  right: 10rpx;
+}
+
+.top_mian {
+  width: 80%;
+  margin: 10rpx auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.top_main_item {
+  width: 120rpx;
+  height: 120rpx;
+  margin: 23rpx 20rpx;
+  border-radius: 50%;
+  font-size: 24rpx;
+  text-align: center;
+  color: #fafafa;
+  line-height: 55rpx;
+  font-family: 'STXingkai';
+  z-index: 1;
+}
+
+.rouad_icon {
+  position: absolute;
+  left: -10%;
+  top: -10%;
+}
