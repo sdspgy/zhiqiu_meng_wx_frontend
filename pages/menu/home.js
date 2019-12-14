@@ -127,7 +127,9 @@ Page({
    * 每个作品图片
    */
   workEvent: function(e) {
-
+    wx.navigateTo({
+      url: '../../packageSearch/pages/work/work'
+    })
   },
 
   /**

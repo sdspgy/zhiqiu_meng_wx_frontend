@@ -59,6 +59,36 @@ export function back() {
 }
 
 /**
+ * 路由
+ * 保留当前页面，跳转到应用内的某个页面。但是不能跳到 tabbar 页面
+ */
+export function navigateTo(url) {
+  wx.navigateTo({
+    url: url
+  })
+}
+
+/**
+ * 路由
+ * 关闭当前页面，跳转到应用内的某个页面。但是不允许跳转到 tabbar 页面
+ */
+export const redirectTo = (url) => {
+  wx.redirectTo({
+    url: url
+  })
+}
+
+/**
+ * 路由
+ * 跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面
+ */
+export const switchTab = (url) => {
+  wx.switchTab({
+    url: url
+  })
+}
+
+/**
  * showSuccess
  */
 function showSuccess(text) {

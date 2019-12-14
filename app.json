@@ -13,16 +13,26 @@
     {
       "root": "packageManage",
       "pages": [
-        "pages/map/map"
+        "pages/map/map",
+        "pages/people/people"
       ]
     },
     {
       "root": "packageSearch",
       "pages": [
-        "pages/main/main"
+        "pages/main/main",
+        "pages/work/work"
       ]
     }
   ],
+  "preloadRule": {
+    "pages/welcome/welcome": {
+      "network": "all",
+      "packages": [
+        "packageSearch"
+      ]
+    }
+  },
   "tabBar": {
     "selectedColor": "#3cc51f",
     "color": "#7A7E83",

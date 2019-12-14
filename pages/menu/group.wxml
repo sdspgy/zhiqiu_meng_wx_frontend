@@ -1,2 +1,10 @@
 <!--pages/menu/group.wxml-->
 <back backTitle="{{backTitle}}" />
+<view class="group">
+  <van-nav-bar title="标题" left-text="" right-text="" safe-area-inset-top="{{navbarTop}}" bind:click-left="onClickLeft" bind:click-right="onClickRight">
+    <van-icon class="navbar_icon" name="exchange" color="#1e90ff" size="28px" slot="right" />
+  </van-nav-bar>
+  <van-popup show="{{ show }}" position="left" close-icon="close" custom-style="width: 70%" bind:close="onClose">
+    <van-tree-select items="{{ items }}" main-active-index="{{ mainActiveIndex }}" active-id="{{ activeId }}" bind:click-nav="onClickNav" bind:click-item="onClickItem" />
+  </van-popup>
+</view>

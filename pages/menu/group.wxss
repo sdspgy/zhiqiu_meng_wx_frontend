@@ -1,3 +1,11 @@
 /* pages/menu/group.wxss */
 
+.group {
+  position: relative;
+  top: 130rpx;
+}
 
+.navbar_icon {
+  position: relative;
+  top: 20rpx;
+}

@@ -1,0 +1,30 @@
+<!--packageSearch/pages/work/work.wxml-->
+<back bind:back="back" backIcon="{{backIcon}}" backTitle="{{backTitle}}" />
+<view class="work">
+  <view class="work_title">赤壁赋赤壁赋赤壁赋赤壁赋赤壁赋
+  </view>
+  <image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="scaleToFill" src="{{src}}"></image>
+  <view class="charm">
+    <van-button round plain size="mini" type="info">关注</van-button>
+    <image class="user_logo" src="../../../static/images/bi.png" mode="aspectFit"></image>
+    <view class="user_name">{{item.name}}</view>
+    <view class="suport">
+      <van-icon name="like-o" color="red" />
+      <text class="suport_num">999</text>
+    </view>
+
+    <view class="look">浏览量：
+      <text class="look_num">9999</text>
+    </view>
+  </view>
+  <van-cell-group>
+    <van-field value="{{ username }}" required clearable label="评论" icon="question-o" placeholder="请输入" bind:click-icon="onClickIcon" />
+  </van-cell-group>
+  <view class="comment">
+    <view>
+      <image class="user_logo" src="{{conf.logoUrl}}" mode="aspectFit"></image>
+      <view class="user_name">{{item.name}}</view>
+    </view>
+    <view class="comment_text">xxxx</view>
+  </view>
+</view>

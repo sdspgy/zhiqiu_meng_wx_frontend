@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "back": "../../../components/back/back",
+    "van-button": "@vant/weapp/button/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-field": "@vant/weapp/field/index"
+  }
+}
