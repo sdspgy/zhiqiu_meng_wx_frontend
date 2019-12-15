@@ -10,7 +10,31 @@ Page({
   data: {
     backTitle: '作品详情',
     backIcon: true,
-    value: ''
+    value: '',
+    works: [{
+      img: '../../../static/images/bi.png'
+    }, {
+      img: '../../../static/images/bi.png'
+    }, {
+      img: '../../../static/images/bi.png'
+    }],
+    user: {
+      name: '北柒_知秋',
+      url: '../../../static/images/bi.png'
+    },
+    comment: [{
+      url: '../../../static/images/bi.png',
+      name: '北柒_知秋',
+      text: '不错哦不错哦不错哦不错哦不错哦不错哦不错哦不错哦不错哦不错哦不错哦'
+    }, {
+      url: '../../../static/images/bi.png',
+      name: '北柒_知秋',
+      text: '不错哦'
+    }, {
+      url: '../../../static/images/bi.png',
+      name: '北柒_知秋',
+      text: '不错哦'
+    }]
   },
 
   /**

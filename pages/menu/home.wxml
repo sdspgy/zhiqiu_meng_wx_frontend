@@ -26,15 +26,15 @@
 <view class="main">
   <scroll-view id="scroll" lower-threshold="50" bindscrolltolower="bottomEvent" scroll-y="true">
     <view class="main_scroll">
-      <view class="works" wx:for="{{works}}" wx:for-index="index" wx:for-item="item" wx:key="index">
-        <image bindtap="workEvent" data-workId="item.workId" class="work_img" src="{{item.url}}" lazy-load="{{work_img_lazyoad}}" mode="aspectFill"></image>
+      <view bindtap="workEvent" class="works" wx:for="{{works}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+        <image data-workId="item.workId" class="work_img" src="{{item.url}}" lazy-load="{{work_img_lazyoad}}" mode="aspectFill"></image>
         <view class="work_text">
           <text>{{item.text}}</text>
         </view>
         <view class="work_user">
           <image class="user_logo" src="{{conf.logoUrl}}" mode="aspectFit"></image>
           <view class="user_name">{{item.name}}</view>
-          <van-icon custom-class="love" name="like" color="#FF69B4" size="30rpx" />
+          <van-icon custom-class="love" name="start-o" color="#FF69B4" size="30rpx" />
           <view class="user_charm">23344</view>
         </view>
       </view>
