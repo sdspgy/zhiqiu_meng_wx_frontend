@@ -13,15 +13,15 @@
     {
       "root": "packageManage",
       "pages": [
-        "pages/map/map",
-        "pages/people/people"
+        "pages/map/map"
       ]
     },
     {
       "root": "packageSearch",
       "pages": [
         "pages/main/main",
-        "pages/work/work"
+        "pages/work/work",
+        "pages/people/people"
       ]
     }
   ],

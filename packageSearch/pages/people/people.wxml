@@ -1,0 +1,25 @@
+<!--packageSearch/pages/people/people.wxml-->
+<back bind:back="back" backIcon="{{backIcon}}" backTitle="{{backTitle}}" />
+<view class="people">
+  <view class="userInfo">
+    <image class="user_logo" style="magin-top:25rpx;" src="{{user.url}}" mode="aspectFill"></image>
+    <view class="user_name">{{user.name}}</view>
+    <van-tag bindtap="follewEvent" round plain size="large" type="primary">关注</van-tag>
+  </view>
+  <view class="motto">座右铭：{{user.motto}}</view>
+  <view class="charm">
+    <view>粉丝：3433</view>
+    <view>关注：8793</view>
+    <view>签到：234</view>
+  </view>
+</view>
+<view class="main">
+  <scroll-view id="scroll" lower-threshold="50" bindscrolltolower="bottomEvent" scroll-y="true">
+    <view class="main_scroll">
+      <view bindtap="workEvent" class="works" wx:for="{{works}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+        <image data-workId="item.workId" class="work_img" src="{{item.url}}" lazy-load="{{work_img_lazyoad}}" mode="aspectFill"></image>
+      </view>
+    </view>
+    <van-loading wx:if="{{workLoadShow}}" custom-class="work_load" type="spinner" color="#1989fa" />
+  </scroll-view>
+</view>

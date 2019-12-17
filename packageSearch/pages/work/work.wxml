@@ -1,13 +1,13 @@
 <!--packageSearch/pages/work/work.wxml-->
 <back bind:back="back" backIcon="{{backIcon}}" backTitle="{{backTitle}}" />
 <view class="work">
-  <view class="work_title">赤壁赋赤壁赋赤壁赋赤壁赋赤壁赋
+  <view class="work_title">赤壁赋
   </view>
   <image wx:for="{{works}}" wx:key="index" class="works_img" mode="scaleToFill" src="{{item.img}}"></image>
   <view class="charm">
     <van-tag bindtap="follewEvent" plain type="primary">关注</van-tag>
     <view>作者：</view>
-    <image class="user_logo" style="magin-top:25rpx;" src="{{user.url}}" mode="aspectFill"></image>
+    <image bindtap="userEvent" class="author_logo" style="magin-top:25rpx;" src="{{user.url}}" mode="aspectFill"></image>
     <view class="user_name">{{user.name}}</view>
     <view>发布时间：
       <text>2019-11-12</text>
@@ -32,7 +32,7 @@
       <text class="user_name">{{item.name}}</text>
     </view>
     <view class="comment_text">{{item.text}}
-      <van-icon class="comment_suport" bindtap="" name="star-o" size="20px" color="red" />
+      <van-icon class="comment_suport" bindtap="" name="star-o" size="30px" color="red" />
     </view>
   </view>
 </view>

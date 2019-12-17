@@ -1,0 +1,93 @@
+/* packageSearch/pages/people/people.wxss */
+
+.people {
+  padding-top: 40rpx;
+  width: 95%;
+  height: 200rpx;
+  border-radius: 10rpx;
+  background-color: #fafafa;
+  position: fixed;
+  top: 70px;
+  left: 2.5%;
+  z-index: 99;
+}
+
+.userInfo {
+  display: flex;
+  justify-content: space-around;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.user_logo {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+
+.motto {
+  width: 100%;
+  font-size: 12px;
+  margin-top: 40rpx;
+  /* border-top: 1px dashed slategray; */
+  text-align: center;
+}
+
+.charm {
+  display: flex;
+  /* border-top: 1px dashed slategray; */
+  justify-content: space-around;
+  margin-top: 40rpx;
+  width: 100%;
+  height: 100rpx;
+  font-size: 12px;
+  text-align: center;
+  background-color: #fafafa;
+  color: black;
+}
+
+.main {
+  position: relative;
+  top: 450rpx;
+  width: 100%;
+  height: 1000rpx;
+}
+
+#scroll {
+  height: 1000rpx;
+  width: 100%;
+}
+
+.main_scroll {
+  /* 弹性布局 */
+  display: flex;
+  /* 横行排列 */
+  flex-direction: row;
+  /* 换行 */
+  flex-wrap: wrap;
+  /* 当前行的侧轴（纵轴）方向上的对齐方式 */
+  align-items: flex-start;
+  /* 间隔 */
+  justify-content: space-around;
+}
+
+.works {
+  width: 30%;
+  height: 200rpx;
+  background-color: black;
+  margin: 12rpx 12rpx 12rpx 12rpx;
+  border-radius: 20rpx;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1), 0 1px rgba(0, 0, 0, 0.1);
+  opacity: 0.8;
+}
+
+.work_img {
+  border-radius: 20rpx;
+  width: 100%;
+  height: 100%;
+}
+
+.work_load {
+  position: relative;
+  left: 45%;
+}

@@ -1,47 +1,44 @@
-// packageSearch/pages/work/work.js
-var utils = require('../../../utils/util.js');
-var request = require('../../../utils/request.js');
-
+// packageSearch/pages/people/people.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    backTitle: '作品详情',
+    backTitle: '用户详情',
     backIcon: true,
-    value: '',
-    works: [{
-      img: '../../../static/images/bi.png'
-    }, {
-      img: '../../../static/images/bi.png'
-    }, {
-      img: '../../../static/images/bi.png'
-    }],
+    workLoadShow: false,
+    works: [],
     user: {
-      name: '北柒_知秋',
-      url: '../../../static/images/bi.png'
-    },
-    comment: [{
       url: '../../../static/images/bi.png',
       name: '北柒_知秋',
-      text: '不错哦不错哦不错哦不错哦不错哦不错哦不错哦不错哦不错哦不错哦不错哦'
-    }, {
-      url: '../../../static/images/bi.png',
-      name: '北柒_知秋',
-      text: '不错哦'
-    }, {
-      url: '../../../static/images/bi.png',
-      name: '北柒_知秋',
-      text: '不错哦'
-    }]
+      motto: '不错哦不错哦不不错哦不错哦不错哦不错哦'
+    }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    let works = [];
+    for (let i = 0; i < 30; i++) {
+      let workObj = new Object();
+      if (i % 3 == 0) {
+        workObj.url = '../../../static/images/bi.png';
+        workObj.text = "北柒书画";
+        workObj.name = "北柒-知秋";
+        workObj.workId = i;
+      } else {
+        workObj.url = '../../../static/images/logo.png';
+        workObj.text = '北柒书画66北柒书画北柒书画北柒书画北柒书画北柒书画北北柒书画北柒书画北北柒书画北柒书画北北柒书画';
+        workObj.name = "北柒-阿暖";
+        workObj.workId = i;
+      }
+      works.push(workObj);
+    }
+    this.setData({
+      works: works
+    })
   },
 
   /**
@@ -94,20 +91,18 @@ Page({
   },
 
   /**
-   * 用户头像
+   * 滑块底部
    */
-  userEvent: function() {
-    wx.redirectTo({
-      url: '../people/people'
+  bottomEvent: function() {
+    this.setData({
+      workLoadShow: true
     })
   },
 
-  /**
-   * 留言
-   */
-  onChange(event) {
-    // event.detail 为当前输入的值
-    console.log(event.detail);
+  workEvent: function() {
+    wx.redirectTo({
+      url: '../work/work'
+    })
   },
 
   /**

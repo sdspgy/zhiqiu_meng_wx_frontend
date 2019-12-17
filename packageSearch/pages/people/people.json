@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "back": "../../../components/back/back",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-loading": "@vant/weapp/loading/index"
+  }
+}
