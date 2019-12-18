@@ -18,16 +18,11 @@ Page({
         // 该导航下所有的可选项
         children: [{
             // 名称
-            text: '可选',
-            // id，作为匹配选中状态的标识
-            id: 1,
-            // 禁用选项
-            disabled: true
-          }, {
-            // 名称
             text: '欧体',
             // id，作为匹配选中状态的标识
-            id: 2
+            id: 2,
+            // 禁用选项
+            disabled: true
           },
           {
             text: '柳体',
@@ -54,13 +49,6 @@ Page({
         disabled: false,
         // 该导航下所有的可选项
         children: [{
-            // 名称
-            text: '可选',
-            // id，作为匹配选中状态的标识
-            id: 1,
-            // 禁用选项
-            disabled: true
-          }, {
             // 名称
             text: '《兰亭序》',
             // id，作为匹配选中状态的标识

@@ -44,7 +44,7 @@
 }
 
 van-icon {
-  margin: 6rpx 100rpx 0 0rpx;
+  margin: 6rpx 70rpx 0 0rpx;
 }
 
 .head_tag {
@@ -100,8 +100,6 @@ swiper {
   position: absolute;
   top: 255rpx;
   width: 100%;
-  /* 弹性布局 *//* display: flex; *//* 横行排列 *//* flex-direction: row; *//* 换行 *//* flex-wrap: wrap; *//* 当前行的侧轴（纵轴）方向上的对齐方式 *//* align-items: flex-start; *//* 间隔 *//* justify-content: space-around; */
-  right: 5rpx;
 }
 
 #scroll {
@@ -135,12 +133,14 @@ swiper {
 
 .work_user {
   display: flex;
+  width: 100%;
+  height: 100rpx;
 }
 
 .user_logo {
-  width: 65rpx;
-  height: 65rpx;
-  margin: 10rpx 10rpx 5rpx 10rpx;
+  width: 60rpx;
+  height: 60rpx;
+  margin: 4rpx 12rpx 2rpx 6rpx;
   border-radius: 50%;
 }
 
@@ -154,7 +154,7 @@ swiper {
 
 .love {
   position: relative;
-  top: -2rpx;
+  top: -20rpx;
   left: 60rpx;
 }
 

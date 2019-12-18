@@ -6,9 +6,9 @@
       <view class="main_title">{{info.name}}</view>
       <scroll-view id="scroll" scroll-y="true">
         <view class="heads_body">
-          <view class="head_body" wx:for="{{info.works}}" wx:for-item="data" wx:key="index">
-            <view class="veil">
-              <image bindtap="workImgEvent" data-workId="{{data.workId}}" class="work_img" src="{{data.url}}" lazy-load mode="aspectFill">
+          <view class="head_body {{active == 1 ? 'head_bodys' : ''}}" wx:for="{{info.works}}" wx:for-item="data" wx:key="index">
+            <view class="veil {{active == 1 ? 'veils' : ''}}">
+              <image bindtap="workImgEvent" data-workId="{{data.workId}}" class="work_img {{active == 1 ? 'work_imgs' : ''}}" src="{{data.url}}" lazy-load mode="aspectFill">
               </image>
             </view>
             <view class="head_body_text">
@@ -20,5 +20,4 @@
       </scroll-view>
     </view>
   </van-tab>
-
 </van-tabs>

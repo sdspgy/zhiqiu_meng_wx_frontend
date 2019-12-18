@@ -44,13 +44,15 @@
 
 .author_logo {
   position: relative;
-  top: 10rpx;
+  top: 20rpx;
   width: 50rpx;
   height: 50rpx;
   border-radius: 50%;
 }
 
 .user_logo {
+  position: relative;
+  top: 10rpx;
   width: 50rpx;
   height: 50rpx;
   border-radius: 50%;
@@ -67,10 +69,11 @@
 }
 
 .comment {
-  width: 100%;
+  width: 95%;
+  margin: 5rpx auto;
   background-color: #fafafa;
   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1), 0 1px rgba(0, 0, 0, 0.1);
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .comment_user {

@@ -94,6 +94,18 @@ Page({
   },
 
   /**
+   * 预览图片
+   */
+  imageEvent: function() {
+    wx.previewImage({
+      current: 'http://p1.pstatp.com/large/pgc-image/86c3def5b4b54c389f0ff57bc60a88b3', // 当前显示图片的http链接
+      urls: ['http://p1.pstatp.com/large/pgc-image/86c3def5b4b54c389f0ff57bc60a88b3',
+        'http://www.cicaaw.com/uploads/allimg/1703/211404876166.jpg'
+      ] // 需要预览的图片http链接列表
+    })
+  },
+
+  /**
    * 用户头像
    */
   userEvent: function() {

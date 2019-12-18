@@ -14,7 +14,7 @@ Page({
   data: {
     conf: conf,
     topMain: [{
-        title: '签到',
+        title: '点灯',
         text: '34',
         color: 'linear-gradient(#FF8247 0%, #FF8C69 80%)',
         icon: true
@@ -107,6 +107,8 @@ Page({
    * 圆心
    */
   roundEvent: function(e) {
-
+    wx.navigateTo({
+      url: '../../packageSearch/pages/upload/upload'
+    })
   }
 })

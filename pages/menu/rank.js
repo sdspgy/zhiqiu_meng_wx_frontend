@@ -86,6 +86,36 @@ Page({
         url: '../../static/images/logo.png',
         author: '北柒-知秋',
         text: "8888人浏览"
+      },
+      {
+        url: '../../static/images/logo.png',
+        author: '北柒-知秋',
+        text: "8888人浏览"
+      },
+      {
+        url: '../../static/images/logo.png',
+        author: '北柒-知秋',
+        text: "8888人浏览"
+      },
+      {
+        url: '../../static/images/logo.png',
+        author: '北柒-知秋',
+        text: "8888人浏览"
+      },
+      {
+        url: '../../static/images/logo.png',
+        author: '北柒-知秋',
+        text: "8888人浏览"
+      },
+      {
+        url: '../../static/images/logo.png',
+        author: '北柒-知秋',
+        text: "8888人浏览"
+      },
+      {
+        url: '../../static/images/logo.png',
+        author: '北柒-知秋',
+        text: "8888人浏览"
       }
     ];
     // let i = 0
@@ -163,9 +193,12 @@ Page({
    * top切换
    */
   onChange(event) {
-    wx.showToast({
-      title: `${event.detail.name}`,
-      icon: 'none'
-    });
+    // wx.showToast({
+    //   title: `${event.detail.name}`,
+    //   icon: 'none'
+    // });
+    this.setData({
+      active: event.detail.name
+    })
   }
 })

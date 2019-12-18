@@ -52,7 +52,7 @@ function axios(method, url, data) {
 /**
  * 返回上一层
  */
-export function back() {
+function back() {
   wx.navigateBack({
     delta: 1
   })
@@ -62,7 +62,7 @@ export function back() {
  * 路由
  * 保留当前页面，跳转到应用内的某个页面。但是不能跳到 tabbar 页面
  */
-export function navigateTo(url) {
+function navigateTo(url) {
   wx.navigateTo({
     url: url
   })
@@ -72,7 +72,7 @@ export function navigateTo(url) {
  * 路由
  * 关闭当前页面，跳转到应用内的某个页面。但是不允许跳转到 tabbar 页面
  */
-export const redirectTo = (url) => {
+function redirectTo(url) {
   wx.redirectTo({
     url: url
   })
@@ -82,7 +82,7 @@ export const redirectTo = (url) => {
  * 路由
  * 跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面
  */
-export const switchTab = (url) => {
+function switchTab(url) {
   wx.switchTab({
     url: url
   })
@@ -110,6 +110,16 @@ function showLoading() {
   });
 }
 
+/**
+ * none
+ */
+function showToast(info) {
+  wx.showToast({
+    title: `${info}`,
+    icon: 'none'
+  });
+}
+
 const formatTime = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -126,20 +136,12 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
-module.exports = {
-  formatTime: formatTime,
-  log,
-  axios,
-  showSuccess,
-  showLoading
-}
-
 /**
  * 保留小数
  * @param info
  * @param num
  */
-export const toFixed = (info, num) => {
+function toFixed(info, num) {
   return info.toFixed(num);
 }
 
@@ -148,7 +150,7 @@ export const toFixed = (info, num) => {
  * @param number 
  * @return int
  */
-export const parseInt = (number) => {
+function parseInt(number) {
   return parseInt(number);
 }
 
@@ -157,7 +159,7 @@ export const parseInt = (number) => {
  * @param number 
  * @return int
  */
-export const mathCeil = (number) => {
+function mathCeil(number) {
   return Math.ceil(number);
 }
 
@@ -166,7 +168,7 @@ export const mathCeil = (number) => {
  * @param number 
  * @return int
  */
-export const mathFloor = (number) => {
+function mathFloor(number) {
   return Math.floor(number);
 }
 
@@ -175,7 +177,7 @@ export const mathFloor = (number) => {
  * @param number 
  * @return int
  */
-export const mathRound = (number) => {
+function mathRound(number) {
   return Math.round(number);
 }
 
@@ -183,7 +185,7 @@ export const mathRound = (number) => {
  * 取绝对值
  * @param info
  */
-export const abs = info => {
+function abs(info) {
   return Math.abs(info);
 }
 
@@ -192,7 +194,7 @@ export const abs = info => {
  * @param num1
  * @param num2
  */
-export const max = (num1, num2) => {
+function max(num1, num2) {
   return Math.max(num1, num2);
 }
 
@@ -201,7 +203,7 @@ export const max = (num1, num2) => {
  * @param num1
  * @param num2
  */
-export const min = (num1, num2) => {
+function min(num1, num2) {
   return Math.min(num1, num2);
 }
 
@@ -209,7 +211,7 @@ export const min = (num1, num2) => {
  * 手机号加密中间4位
  * @param value 手机号
  */
-export function handelMobile(value) {
+function handelMobile(value) {
   if (!value) return '';
   if (typeof value !== 'string') value = value.toString();
   return value.replace(/^(\d{3})\d*(\d{4})$/, '$1****$2');
@@ -219,7 +221,7 @@ export function handelMobile(value) {
  * 是否对象
  * @param value 值
  */
-export function isObj(value) {
+function isObj(value) {
   return Object.prototype.toString.call(value).slice(8, -1) === 'Object'
 }
 
@@ -227,7 +229,7 @@ export function isObj(value) {
  * 是否数组
  * @param value值
  */
-export function isArray(value) {
+function isArray(value) {
   return Object.prototype.toString.call(value).slice(8, -1) === 'Array'
 }
 
@@ -236,7 +238,7 @@ export function isArray(value) {
  * @param arr
  * @param element
  */
-export const isExist = (arr, element) => {
+function isExist(arr, element) {
   return arr.indexOf(element) > -1 ? true : false;
 }
 
@@ -245,8 +247,26 @@ export const isExist = (arr, element) => {
  * @param arr1
  * @param arr2
  */
-export const arrConcat = (arr1, arr2) => {
+function arrConcat(arr1, arr2) {
   return arr1.concat(arr2);
+}
+
+/**
+ * 数组添加到第一项
+ * @param arr1
+ * @param info
+ */
+export const unshift = (arr1, info) => {
+  return arr1.unshift(info);
+}
+
+/**
+ * 数组删除
+ * @param arr1
+ * @param index
+ */
+function splice(arr1, index) {
+  return arr1.splice(index, 1);
 }
 
 /**
@@ -255,7 +275,7 @@ export const arrConcat = (arr1, arr2) => {
  * @param start
  * @param end
  */
-export const substring = (info, start, end) => {
+function substring(info, start, end) {
   return info.substring(start, end);
 }
 
@@ -265,7 +285,7 @@ export const substring = (info, start, end) => {
  * @param start
  * @param end
  */
-export const substr = (info, start, length) => {
+function substr(info, start, length) {
   return info.substr(start, length);
 }
 
@@ -274,7 +294,7 @@ export const substr = (info, start, length) => {
  * @param info
  * @param sign 分隔符号
  */
-export const split = (info, sign) => {
+function split(info, sign) {
   return info.split(sign);
 }
 
@@ -283,6 +303,20 @@ export const split = (info, sign) => {
  * @param object1
  * @param object2
  */
-export const objectMerge = (object1, object2) => {
+function objectMerge(object1, object2) {
   return Object.assign({}, object1, object2);
+}
+
+module.exports = {
+  formatTime: formatTime,
+  log,
+  axios,
+  showSuccess,
+  showLoading,
+  showToast,
+
+  /*-------------路由----------- */
+  back,
+
+  splice
 }

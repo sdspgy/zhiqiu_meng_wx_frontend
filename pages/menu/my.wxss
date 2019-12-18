@@ -43,7 +43,7 @@
 }
 
 .motto {
-  margin-top: 10rpx;
+  margin-top: 20rpx;
   color: #ccc;
   font-size: 10px;
 }

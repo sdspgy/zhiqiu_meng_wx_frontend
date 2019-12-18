@@ -3,7 +3,7 @@ var utils = require('../../utils/util.js');
 var request = require('../../utils/request.js');
 
 const conf = {
-  logoUrl: '../../static/images/logo.png',
+  logoUrl: '../../static/images/beiqi.png',
   work_img_lazyoad: true
 }
 
@@ -39,13 +39,13 @@ Page({
     for (let i = 0; i < 10; i++) {
       let workObj = new Object();
       if (i % 3 == 0) {
-        workObj.url = '../../static/images/bi.png';
+        workObj.url = '../../static/images/mo.png';
         workObj.text = "北柒书画";
         workObj.name = "北柒-知秋";
         workObj.workId = i;
       } else {
-        workObj.url = '../../static/images/logo.png';
-        workObj.text = '北柒书画66北柒书画北柒书画北柒书画北柒书画北柒书画北北柒书画北柒书画北北柒书画北柒书画北北柒书画';
+        workObj.url = '../../static/images/beiqi.png';
+        workObj.text = '北柒书画';
         workObj.name = "北柒-阿暖";
         workObj.workId = i;
       }

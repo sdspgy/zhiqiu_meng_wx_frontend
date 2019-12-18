@@ -1,0 +1,6 @@
+/* packageSearch/pages/upload/upload.wxss */
+
+.upload {
+  position: relative;
+  top: 130rpx;
+}

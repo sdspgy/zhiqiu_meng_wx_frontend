@@ -1,0 +1,13 @@
+<!--packageSearch/pages/upload/upload.wxml-->
+<back bind:back="back" backIcon="{{backIcon}}" backTitle="{{backTitle}}" />
+<view class="upload">
+  <van-cell-group>
+    <van-field value="{{title}}" required clearable label="标题" icon="question-o" placeholder="请输入标题" bind:blur="onChange" bind:click-icon="onClickIcon" />
+  </van-cell-group>
+
+  <van-uploader file-list="{{ fileList }}" max-count="3" bind:after-read="afterRead" multiple use-before-read bind:before-read="beforeRead" bind:after-read="afterRead" bind:delete="deleteImg" />
+
+  <van-cell-group>
+    <van-field value="{{message}}" clearable label="详细描述" icon="question-o" type="textarea" placeholder="请输入描述内容" autosize border="{{false}}" bind:blur="onChange" bind:click-icon="onClickIcon" />
+  </van-cell-group>
+</view>
