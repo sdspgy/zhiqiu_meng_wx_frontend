@@ -50,6 +50,41 @@ function axios(method, url, data) {
 }
 
 /**
+ * 上传图片
+ */
+function axiosImg(imgurl, filesPath) {
+  this.showLoading;
+  let p = new Promise((resolve, reject) => {
+    wx.uploadFile({
+      url: imgurl, // 仅为示例，非真实的接口地址
+      filePath: filesPath,
+      name: 'file',
+      header: {
+        'Content-Type': 'multipart/form-data',
+        // 'token': wx.getStorageSync("token")
+      },
+      success: (res) => {
+        setTimeout(function() {
+          wx.hideLoading();
+        }, 100);
+        if (res.statusCode === 200) {
+          resolve(res.data)
+        } else {
+          reject(res)
+        }
+      },
+      fail(err) {
+        setTimeout(function() {
+          wx.hideLoading();
+        }, 100);
+        reject(res)
+      }
+    })
+    return p;
+  })
+}
+
+/**
  * 返回上一层
  */
 function back() {
@@ -310,13 +345,16 @@ function objectMerge(object1, object2) {
 module.exports = {
   formatTime: formatTime,
   log,
-  axios,
   showSuccess,
   showLoading,
   showToast,
 
+  /*-------------请求-----------*/
+  axios,
+  axiosImg,
   /*-------------路由----------- */
   back,
 
+  /*-------------数组----------- */
   splice
 }

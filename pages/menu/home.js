@@ -3,7 +3,7 @@ var utils = require('../../utils/util.js');
 var request = require('../../utils/request.js');
 
 const conf = {
-  logoUrl: '../../static/images/beiqi.png',
+  logoUrl: 'http://cdn.mvptyz.cn/fbab612c-a370-4713-85f7-c9afd0c19afawx1be02a27b7657448.o6zAJs9grhpSbssoczI3GtKfnQVg.2UKhhbgqn1el358f9b53c51d811d08122b08cabff0fb.png',
   work_img_lazyoad: true
 }
 

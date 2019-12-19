@@ -10,4 +10,6 @@
   <van-cell-group>
     <van-field value="{{message}}" clearable label="详细描述" icon="question-o" type="textarea" placeholder="请输入描述内容" autosize border="{{false}}" bind:blur="onChange" bind:click-icon="onClickIcon" />
   </van-cell-group>
+
+  <van-button bindtap="workUpload" plain type="primary">上传作品</van-button>
 </view>

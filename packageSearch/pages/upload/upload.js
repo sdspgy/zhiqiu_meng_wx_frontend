@@ -1,6 +1,7 @@
 // packageSearch/pages/upload/upload.js
 var utils = require('../../../utils/util.js');
 var request = require('../../../utils/request.js');
+
 Page({
 
   /**
@@ -45,7 +46,6 @@ Page({
   onShow: function() {
 
   },
-
   /**
    * 生命周期函数--监听页面隐藏
    */
@@ -103,10 +103,9 @@ Page({
       file,
       callback
     } = event.detail;
-    let files = event.detail.file;
-    for (let index in files) {
+    for (let index in file) {
       let imgObject = new Object();
-      imgObject.url = files[index].path;
+      imgObject.url = file[index].path;
       this.data.fileList.push(imgObject);
     }
     this.setData({
@@ -115,33 +114,38 @@ Page({
     // callback(file.type === 'image');
     callback(true)
   },
-  afterRead(event) {
-    const {
-      file
-    } = event.detail;
+  // afterRead(event) {
+  //   const {
+  //     file
+  //   } = event.detail;
+  //   let files = event.detail.file;
+  //   for (let index in files) {
 
-    // 当设置 mutiple 为 true 时, file 为数组格式，否则为对象格式
-    // wx.uploadFile({
-    //   url: 'https://example.weixin.qq.com/upload', // 仅为示例，非真实的接口地址
-    //   filePath: file.path,
-    //   name: 'file',
-    //   formData: {
-    //     user: 'test'
-    //   },
-    //   success(res) {
-    //     // 上传完成需要更新 fileList
-    //     const {
-    //       fileList = []
-    //     } = this.data;
-    //     fileList.push({ ...file,
-    //       url: res.data
-    //     });
-    //     this.setData({
-    //       fileList
-    //     });
-    //   }
-    // });
-  },
+  //   }
+  //   // 当设置 mutiple 为 true 时, file 为数组格式，否则为对象格式
+  //   wx.uploadFile({
+  //     url: 'http://127.0.0.1:9001/meng/upload', // 仅为示例，非真实的接口地址
+  //     filePath: files[0],
+  //     name: 'file',
+  //     header: {
+  //       'Content-Type': 'multipart/form-data',
+  //       // 'token': wx.getStorageSync("token")
+  //     },
+  //     success(res) {
+  //       debugger
+  //       // 上传完成需要更新 fileList
+  //       // const {
+  //       //   fileList = []
+  //       // } = this.data;
+  //       // fileList.push({ ...file,
+  //       //   url: res.data
+  //       // });
+  //       // this.setData({
+  //       //   fileList
+  //       // });
+  //     }
+  //   });
+  // },
   deleteImg(event) {
     utils.splice(this.data.fileList, event.detail.index)
     this.setData({
@@ -149,6 +153,31 @@ Page({
     })
   },
 
+  /**
+   * 上传作品
+   */
+  workUpload: function() {
+    let files = this.data.fileList;
+    for (let key in files) {
+      // 当设置 mutiple 为 true 时, file 为数组格式，否则为对象格式
+      let imgurl = files[key].url;
+      wx.uploadFile({
+        url: request.imgurl, // 仅为示例，非真实的接口地址
+        filePath: imgurl,
+        name: 'file',
+        header: {
+          'Content-Type': 'multipart/form-data',
+          // 'token': wx.getStorageSync("token")
+        },
+        success: (res) => {
+
+        }
+      });
+    }
+    this.setData({
+      fileList: []
+    })
+  },
   /**
    * 返回
    */
