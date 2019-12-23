@@ -2,5 +2,10 @@
 
 .upload {
   position: relative;
-  top: 130rpx;
+  top: 140rpx;
+}
+
+.uploadButton {
+  position: relative;
+  left: 25%;
 }

@@ -11,19 +11,8 @@ Page({
     backTitle: '上传',
     backIcon: true,
     title: '',
-    fileList: [
-      // {
-      //   url: 'https://img.yzcdn.cn/vant/leaf.jpg',
-      //   name: '图片1'
-      // },
-      // // Uploader 根据文件后缀来判断是否为图片文件
-      // // 如果图片 URL 中不包含类型信息，可以添加 isImage 标记来声明
-      // {
-      //   url: 'http://iph.href.lu/60x60?text=default',
-      //   name: '图片2',
-      //   isImage: true
-      // }
-    ]
+    text: '',
+    fileList: []
   },
 
   /**
@@ -84,18 +73,34 @@ Page({
   /**
    * 标题
    */
-  onChange(event) {
-    console.log(event.detail.value);
+  onChangeTitle(event) {
+    utils.log(event.detail.value)
     this.setData({
       title: event.detail.value
     })
   },
 
   /**
+   * 内容
+   */
+  onChangeText(event) {
+    utils.log(event.detail.value)
+    this.setData({
+      text: event.detail.value
+    })
+  },
+
+  /**
    * 标题图标
    */
-  onClickIcon: function() {
+  onClickIconTitle: function() {
     utils.showToast('用于搜索栏快速查找')
+  },
+  /**
+   * 内容图标
+   */
+  onClickIconText: function() {
+    utils.showToast('恰到好处的描述更吸引人哦！')
   },
 
   beforeRead(event) {
@@ -114,38 +119,7 @@ Page({
     // callback(file.type === 'image');
     callback(true)
   },
-  // afterRead(event) {
-  //   const {
-  //     file
-  //   } = event.detail;
-  //   let files = event.detail.file;
-  //   for (let index in files) {
-
-  //   }
-  //   // 当设置 mutiple 为 true 时, file 为数组格式，否则为对象格式
-  //   wx.uploadFile({
-  //     url: 'http://127.0.0.1:9001/meng/upload', // 仅为示例，非真实的接口地址
-  //     filePath: files[0],
-  //     name: 'file',
-  //     header: {
-  //       'Content-Type': 'multipart/form-data',
-  //       // 'token': wx.getStorageSync("token")
-  //     },
-  //     success(res) {
-  //       debugger
-  //       // 上传完成需要更新 fileList
-  //       // const {
-  //       //   fileList = []
-  //       // } = this.data;
-  //       // fileList.push({ ...file,
-  //       //   url: res.data
-  //       // });
-  //       // this.setData({
-  //       //   fileList
-  //       // });
-  //     }
-  //   });
-  // },
+  afterRead(event) {},
   deleteImg(event) {
     utils.splice(this.data.fileList, event.detail.index)
     this.setData({
@@ -177,6 +151,17 @@ Page({
     this.setData({
       fileList: []
     })
+    //除图片外的信息接口
+    let data = {
+      workName: this.data.title,
+      workText: this.data.text,
+    }
+    debugger
+    request.uploadWork(data)
+      .then((res) => {
+
+      });
+
   },
   /**
    * 返回
