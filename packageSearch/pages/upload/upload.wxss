@@ -6,6 +6,5 @@
 }
 
 .uploadButton {
-  position: relative;
-  left: 25%;
+  float: right;
 }

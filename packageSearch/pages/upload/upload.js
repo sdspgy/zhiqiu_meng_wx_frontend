@@ -74,7 +74,6 @@ Page({
    * 标题
    */
   onChangeTitle(event) {
-    utils.log(event.detail.value)
     this.setData({
       title: event.detail.value
     })
@@ -84,7 +83,6 @@ Page({
    * 内容
    */
   onChangeText(event) {
-    utils.log(event.detail.value)
     this.setData({
       text: event.detail.value
     })
@@ -132,9 +130,12 @@ Page({
    */
   workUpload: function() {
     let files = this.data.fileList;
+    debugger
+    let filesPath = [];
     for (let key in files) {
       // 当设置 mutiple 为 true 时, file 为数组格式，否则为对象格式
       let imgurl = files[key].url;
+      filesPath.push(files[key].url);
       wx.uploadFile({
         url: request.imgurl, // 仅为示例，非真实的接口地址
         filePath: imgurl,
@@ -155,8 +156,8 @@ Page({
     let data = {
       workName: this.data.title,
       workText: this.data.text,
+      files: filesPath
     }
-    debugger
     request.uploadWork(data)
       .then((res) => {
 

@@ -9,7 +9,7 @@ const headUrl = 'http://127.0.0.1:9001/meng';
 /**
  * 上传图片固定接口
  */
-const imgurl = 'http://127.0.0.1:9001/meng/work/upload';
+const imgurl = 'http://127.0.0.1:9001/meng/small/work/upload';
 
 function uploadImg(filesPath) {
   return utils.axiosImg(imgurl, filesPath)
@@ -20,7 +20,7 @@ function text(data) {
 }
 
 function uploadWork(data) {
-  return utils.axios('post', headUrl + '/api/uploadWork', data)
+  return utils.axios('post', headUrl + '/small/work/uploadWork', data)
 }
 
 module.exports = {

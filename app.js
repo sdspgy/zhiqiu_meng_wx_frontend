@@ -11,6 +11,7 @@ App({
     // wx.setStorageSync('logs', logs)
     //判断是否已授权
     this.isAuthor();
+    this.login();
   },
 
   login: function() {
