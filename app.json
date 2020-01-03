@@ -44,26 +44,26 @@
       {
         "pagePath": "pages/menu/home",
         "text": "首页",
-        "iconPath": "static/images/icon_API.png",
-        "selectedIconPath": "static/images/icon_component_HL.png"
+        "iconPath": "static/images/view/icon_study_on.png",
+        "selectedIconPath": "static/images/view/icon_study.png"
       },
       {
         "pagePath": "pages/menu/group",
         "text": "分类",
-        "iconPath": "static/images/icon_API.png",
-        "selectedIconPath": "static/images/icon_component_HL.png"
+        "iconPath": "static/images/view/icon_work_on.png",
+        "selectedIconPath": "static/images/view/icon_work.png"
       },
       {
         "pagePath": "pages/menu/rank",
         "text": "金榜",
-        "iconPath": "static/images/icon_API.png",
-        "selectedIconPath": "static/images/icon_component_HL.png"
+        "iconPath": "static/images/view/icon_certificate_fil_no.png",
+        "selectedIconPath": "static/images/view/icon_certificate_fil.png"
       },
       {
         "pagePath": "pages/menu/my",
         "text": "个人",
-        "iconPath": "static/images/icon_API.png",
-        "selectedIconPath": "static/images/icon_component_HL.png"
+        "iconPath": "static/images/view/icon_principal_on.png",
+        "selectedIconPath": "static/images/view/icon_principal.png"
       }
     ]
   },
