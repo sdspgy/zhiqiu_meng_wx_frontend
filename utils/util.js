@@ -354,6 +354,8 @@ module.exports = {
   axiosImg,
   /*-------------路由----------- */
   back,
+  navigateTo,
+  redirectTo,
 
   /*-------------数组----------- */
   splice

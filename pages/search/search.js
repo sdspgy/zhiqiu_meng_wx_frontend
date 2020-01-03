@@ -1,4 +1,7 @@
 // pages/search/search.js
+var utils = require('../../utils/util.js');
+var request = require('../../utils/request.js');
+
 const conf = {
   tagColor: ['primary', 'success', 'danger', 'warning']
 }
@@ -77,10 +80,17 @@ Page({
   },
 
   /**
-   * 搜索
+   * 输入框搜索
    */
   searchEvent: function(e) {
-    debugger
+
+  },
+
+  /**
+   * 点击搜索
+   */
+  searchTap: function() {
+    utils.redirectTo("../../packageSearch/pages/search/search")
   },
 
   /**

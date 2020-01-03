@@ -1,0 +1,18 @@
+<!--packageSearch/pages/search/search.wxml-->
+<back bind:back="back" backIcon="{{backIcon}}" backTitle="{{backTitle}}" />
+<view class="search">
+  <view class="works">
+    <view class="work" wx:for="{{works}}" wx:key="index">
+      <view class="swiper">
+        <text style="color:#FF8247">赤壁赋秋收冬藏</text>
+      </view>
+      <image bindtap="imgWorkEvent" class="imgWork" src="{{item.url}}" mode="aspectFill"></image>
+    </view>
+  </view>
+  <view class="users">
+    <view class="user" wx:for="{{users}}" wx:key="index">
+      <image bindtap="imgUserEvent" class="imgUser" src="{{item.url}}" mode="aspectFill"></image>
+      <view class="userName">xxx</view> 
+    </view>
+  </view>
+</view>

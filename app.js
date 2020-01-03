@@ -10,8 +10,10 @@ App({
     // logs.unshift(Date.now())
     // wx.setStorageSync('logs', logs)
     //判断是否已授权
-    this.isAuthor();
-    this.login();
+
+    // this.isAuthor();
+
+    // this.login();
   },
 
   login: function() {
@@ -70,7 +72,7 @@ App({
               if (e.data.isAuthor) {
                 this.globalData.isAuthor = true;
               } else {
-                utils.log(e.data.msg)
+                // utils.log(e.data.msg)
               }
             },
             fail: function() {

@@ -7,4 +7,14 @@
   <van-popup show="{{ show }}" position="left" close-icon="close" custom-style="width: 70%" bind:close="onClose">
     <van-tree-select items="{{ items }}" main-active-index="{{ mainActiveIndex }}" active-id="{{ activeId }}" bind:click-nav="onClickNav" bind:click-item="onClickItem" />
   </van-popup>
+
+  <view class="main">
+    <scroll-view id="scroll" lower-threshold="50" bindscrolltolower="bottomEvent" scroll-y="true">
+      <view class="work" wx:for="{{works}}" wx:key="index">
+        <view class="workName">xxx</view>
+        <image bindtap="imgWorkEvent" data-info="{{item.workId}}" class="imgWork" src="{{item.url}}" mode="aspectFill"></image>
+      </view>
+    </scroll-view>
+    <van-loading wx:if="{{workLoadShow}}" custom-class="work_load" type="spinner" color="#1989fa" />
+  </view>
 </view>

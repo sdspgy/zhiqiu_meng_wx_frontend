@@ -1,4 +1,6 @@
 // pages/menu/group.js
+var utils = require('../../utils/util.js');
+var request = require('../../utils/request.js');
 Page({
 
   /**
@@ -114,14 +116,33 @@ Page({
           }
         ]
       }
-    ]
+    ],
+    works: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    let works = [];
+    for (let i = 0; i < 10; i++) {
+      let workObj = new Object();
+      if (i % 3 == 0) {
+        workObj.url = '../../static/images/mo.png';
+        workObj.text = "北柒书画";
+        workObj.name = "北柒-知秋";
+        workObj.workId = i;
+      } else {
+        workObj.url = '../../static/images/beiqi.png';
+        workObj.text = '北柒书画';
+        workObj.name = "北柒-阿暖";
+        workObj.workId = i;
+      }
+      works.push(workObj);
+    }
+    this.setData({
+      works: works
+    })
   },
 
   /**
@@ -205,5 +226,27 @@ Page({
     this.setData({
       activeId
     });
+  },
+
+  /**
+   * 滑块底部
+   */
+  bottomEvent: function() {
+    this.setData({
+      workLoadShow: true
+    })
+    // let works = this.data.works;
+    // works = this.data.works.concat(works);
+    // this.setData({
+    //   works: works,
+    //   workLoadShow: false
+    // })
+  },
+
+  /**
+   * 图片点击
+   */
+  imgWorkEvent: function(info) {
+    utils.navigateTo('../../packageSearch/pages/work/work')
   }
 })

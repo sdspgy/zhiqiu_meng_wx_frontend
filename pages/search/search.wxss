@@ -8,3 +8,9 @@
 .tag {
   margin-left: 16rpx;
 }
+
+.searchButton {
+  position: relative;
+  left: 80%;
+  margin: 10rpx 10rpx 10rpx 10rpx;
+}
