@@ -1,19 +1,17 @@
-// packageSearch/pages/people/people.js
+// packageManage/pages/work/work.js
+var utils = require('../../../utils/util.js');
+var request = require('../../../utils/request.js');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    backTitle: '用户详情',
+    backTitle: '作品集',
     backIcon: true,
     workLoadShow: false,
     works: [],
-    user: {
-      url: '../../../static/images/bi.png',
-      name: '北柒_知秋',
-      motto: '不错哦不错哦不不错哦不错哦不错哦不错哦'
-    }
   },
 
   /**
@@ -101,7 +99,7 @@ Page({
 
   workEvent: function() {
     wx.navigateTo({
-      url: '../work/work'
+      url: '../../../packageSearch/pages/work/work'
     })
   },
 
@@ -109,8 +107,6 @@ Page({
    * 返回
    */
   back: function() {
-    wx.navigateBack({
-      delta: 1
-    })
+    utils.back()
   }
 })

@@ -1,0 +1,6 @@
+/* packageManage/pages/like/like.wxss */
+
+.like {
+  position: relative;
+  top: 130rpx;
+}

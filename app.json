@@ -5,6 +5,7 @@
     "pages/logs/logs",
     "pages/menu/home",
     "pages/menu/group",
+    "pages/menu/upload/upload",
     "pages/menu/rank",
     "pages/menu/my",
     "pages/search/search"
@@ -13,7 +14,9 @@
     {
       "root": "packageManage",
       "pages": [
-        "pages/map/map"
+        "pages/map/map",
+        "pages/work/work",
+        "pages/like/like"
       ]
     },
     {
@@ -52,6 +55,12 @@
         "text": "分类",
         "iconPath": "static/images/view/icon_work_on.png",
         "selectedIconPath": "static/images/view/icon_work.png"
+      },
+      {
+        "pagePath": "pages/menu/upload/upload",
+        "text": "发布",
+        "iconPath": "static/images/view/upload.png",
+        "selectedIconPath": "static/images/view/upload.png"
       },
       {
         "pagePath": "pages/menu/rank",

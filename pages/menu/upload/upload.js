@@ -9,7 +9,6 @@ Page({
    */
   data: {
     backTitle: '上传',
-    backIcon: true,
     title: '',
     text: '',
     fileList: []
@@ -163,12 +162,5 @@ Page({
 
       });
 
-  },
-  
-  /**
-   * 返回
-   */
-  back: function() {
-    utils.back()
   }
 })

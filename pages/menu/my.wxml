@@ -7,13 +7,12 @@
         <text>最是那一抬头的微笑，恰似莲花般的开落</text>
       </view>
     </view>
-
   </view>
   <van-tag bindtap="setEvent" custom-class="set" round>设置</van-tag>
   <view class="top_mian">
-    <view bindtap="roundEvent" data-info="index" wx:for="{{topMain}}" wx:key="index" style="background:{{item.color}}" class="top_main_item">
+    <view bindtap="roundEvent" wx:for="{{topMain}}" wx:key="index" data-info="{{index}}" style="background:{{item.color}} " class="top_main_item ">
       <van-icon custom-class="rouad_icon" name="award" dot="{{item.icon}}" size="20px" color="#EEAEEE" /> {{item.title}}
-      <view style="font-size:12px;">{{item.text}}</view>
+      <view style="font-size:12px; ">{{item.text}}</view>
     </view>
   </view>
 </view>

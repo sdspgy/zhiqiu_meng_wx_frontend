@@ -76,6 +76,7 @@ van-tabs {
   height: 100rpx;
   width: 100rpx;
   border-radius: 50%;
+    opacity: 1;
 }
 
 .head_body_text {

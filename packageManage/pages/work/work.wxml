@@ -1,0 +1,12 @@
+<!--packageManage/pages/work/work.wxml-->
+<back bind:back="back" backIcon="{{backIcon}}" backTitle="{{backTitle}}" />
+<view class="main">
+  <scroll-view id="scroll" lower-threshold="50" bindscrolltolower="bottomEvent" scroll-y="true">
+    <view class="main_scroll">
+      <view bindtap="workEvent" class="works" wx:for="{{works}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+        <image data-workId="{{item.workId}}" class="work_img" src="{{item.url}}" lazy-load="{{work_img_lazyoad}}" mode="aspectFill"></image>
+      </view>
+    </view>
+    <van-loading wx:if="{{workLoadShow}}" custom-class="work_load" type="spinner" color="#1989fa" />
+  </scroll-view>
+</view>

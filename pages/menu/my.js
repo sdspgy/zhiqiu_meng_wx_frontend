@@ -3,7 +3,14 @@ var utils = require('../../utils/util.js');
 var request = require('../../utils/request.js');
 
 const conf = {
-  logoUrl: '../../static/images/logo.png'
+  logoUrl: '../../static/images/logo.png',
+  roundType: {
+    0: '../../packageSearch/pages/upload/upload',
+    1: '../../packageManage/pages/work/work',
+    2: '',
+    3: '../../packageManage/pages/like/like',
+    4: '../../packageManage/pages/like/like'
+  }
 }
 
 Page({
@@ -108,7 +115,7 @@ Page({
    */
   roundEvent: function(e) {
     wx.navigateTo({
-      url: '../../packageSearch/pages/upload/upload'
+      url: conf.roundType[parseInt(e.currentTarget.dataset.info)]
     })
   }
 })

@@ -120,6 +120,20 @@ Page({
   },
 
   /**
+   * 作品点击
+   */
+  imgWorkEvent: function(info) {
+    utils.navigateTo('../work/work')
+  },
+
+  /**
+   * 用户点击
+   */
+  imgUserEvent: function(info) {
+    utils.navigateTo('../people/people')
+  },
+  
+  /**
    * 返回   
    */
   back: function() {
