@@ -1,6 +1,8 @@
 // pages/menu/home.js
 var utils = require('../../utils/util.js');
 var request = require('../../utils/request.js');
+//获取应用实例
+const app = getApp()
 
 const conf = {
   logoUrl: 'http://cdn.mvptyz.cn/fbab612c-a370-4713-85f7-c9afd0c19afawx1be02a27b7657448.o6zAJs9grhpSbssoczI3GtKfnQVg.2UKhhbgqn1el358f9b53c51d811d08122b08cabff0fb.png',
@@ -34,6 +36,10 @@ Page({
     wx.setTabBarStyle({
       borderStyle: "black",
     })
+
+    if (app.globalData.isAuthor) {
+      app.login()
+    }
 
     let works = [];
     for (let i = 0; i < 10; i++) {

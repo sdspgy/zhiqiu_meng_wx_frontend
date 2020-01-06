@@ -1,5 +1,5 @@
 <!--packageManage/pages/map/map.wxml-->
 <back bind:back="back" backIcon="{{backIcon}}" backTitle="{{backTitle}}" />
 
-<map id="map" longitude="107.265053" latitude="29.750486" scale="14" subkey="RGXBZ-WKOKW-5F6RY-OVGZZ-64EGT-BOBTX" layer-style="3" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}"
+<map id="map" longitude="107.265053" latitude="29.750486" scale="3" subkey="RGXBZ-WKOKW-5F6RY-OVGZZ-64EGT-BOBTX" layer-style="3" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}"
   bindregionchange="regionchange" show-location style="width: 100%; height: 300px;"></map>

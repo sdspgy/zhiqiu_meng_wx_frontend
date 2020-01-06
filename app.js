@@ -9,10 +9,9 @@ App({
     // var logs = wx.getStorageSync('logs') || []
     // logs.unshift(Date.now())
     // wx.setStorageSync('logs', logs)
+
     //判断是否已授权
-
-    // this.isAuthor();
-
+    this.isAuthor();
     // this.login();
   },
 
@@ -69,6 +68,7 @@ App({
               code: code,
             },
             success: (e) => {
+              debugger
               if (e.data.isAuthor) {
                 this.globalData.isAuthor = true;
               } else {

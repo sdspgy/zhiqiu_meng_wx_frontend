@@ -10,7 +10,7 @@
     <van-field value="{{text}}" clearable label="描述" icon="question-o" type="textarea" placeholder="请输入描述内容" autosize border="{{false}}" bind:blur="onChangeText" bind:click-icon="onClickIconText" />
   </van-cell-group>
 
-  <van-uploader file-list="{{ fileList }}" max-count="3" bind:after-read="afterRead" multiple use-before-read bind:before-read="beforeRead" bind:after-read="afterRead" bind:delete="deleteImg" />
+  <van-uploader file-list="{{fileList}}" max-count="3" bind:after-read="afterRead" multiple use-before-read bind:before-read="beforeRead" bind:after-read="afterRead" bind:delete="deleteImg" />
 
   <van-button bindtap="workUpload" round type="info" block>上传作品</van-button>
 </view>

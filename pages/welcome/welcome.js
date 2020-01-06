@@ -52,7 +52,7 @@ Page({
     interval: 10000,
     duration: 500,
     imgs: [{
-      url: '../../static/images/logo.png'
+        url: '../../static/images/logo.png'
       },
       {
         url: '../../static/images/logo.png'
@@ -67,8 +67,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    // app.isAuthor();
-
     // 实例化API核心类
     // qqmapsdk = new QQMapWX({
     //   key: 'RGXBZ-WKOKW-5F6RY-OVGZZ-64EGT-BOBTX'
@@ -101,7 +99,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-
+    
   },
 
   /**
@@ -178,6 +176,13 @@ Page({
   programEvent: function(info) {
     wx.switchTab({
       url: '../menu/home',
+    })
+  },
+
+  imgEvent: function(info) {
+    wx.previewImage({
+      current: 'http://p1.pstatp.com/large/pgc-image/86c3def5b4b54c389f0ff57bc60a88b3', // 当前显示图片的http链接
+      urls: ['http://p1.pstatp.com/large/pgc-image/86c3def5b4b54c389f0ff57bc60a88b3']
     })
   }
 

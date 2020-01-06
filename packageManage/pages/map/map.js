@@ -8,7 +8,50 @@ Page({
   data: {
     map: null,
     backIcon: true,
-    backTitle: '地图'
+    backTitle: '地图',
+    markers: [{
+        iconPath: "../../../static/images/lamp.png",
+        id: 0,
+        title: '知秋',
+        latitude: 29.750486,
+        longitude: 107.265053,
+        width: 20,
+        height: 20
+      },
+      {
+        iconPath: "../../../static/images/lamp.png",
+        id: 1,
+        title: '知秋',
+        latitude: 13.750486,
+        longitude: 97.265053,
+        width: 20,
+        height: 20
+      }, {
+        iconPath: "../../../static/images/lamp.png",
+        id: 2,
+        title: '知秋',
+        latitude: 9.750486,
+        longitude: 67.265053,
+        width: 20,
+        height: 20
+      }, {
+        iconPath: "../../../static/images/lamp.png",
+        id: 3,
+        title: '知秋',
+        latitude: 39.750486,
+        longitude: 17.265053,
+        width: 20,
+        height: 20
+      }, {
+        iconPath: "../../../static/images/lamp.png",
+        id: 4,
+        title: '知秋',
+        latitude: 19.750486,
+        longitude: 57.265053,
+        width: 20,
+        height: 20
+      }
+    ],
   },
 
   /**
@@ -97,5 +140,15 @@ Page({
   },
   controltap(e) {
     console.log(e.controlId)
+  },
+
+  /**
+   * 滑块
+   */
+  onChange(event) {
+    wx.showToast({
+      icon: 'none',
+      title: `当前值：${event.detail}`
+    });
   }
 })

@@ -2,6 +2,12 @@
 <back bind:back="back" backIcon="{{backIcon}}" backTitle="{{backTitle}}" />
 <view class="like">
   <van-tabs animated swipeable color="#1E90FF" line-width='15' line-height='2' active="{{ active }}" bind:change="onChange">
-
+    <van-tab wx:for="{{titles}}" wx:key="index" title="{{item.title}}">
+      <view class='likeItem'>
+        <image bindtap="userImgButton" data-workId="{{item.workId}}" class="heard_img" src="{{item.url}}" lazy-load="{{work_img_lazyoad}}" mode="aspectFill"></image>
+        <view class="item_name">{{item.name}}3rrfsaf</view>
+        <van-tag bindtap='likeButton' custom-class='likeButton' type="danger" size="large">{{item.type}}</van-tag>
+      </view>
+    </van-tab>
   </van-tabs>
 </view>

@@ -1,7 +1,7 @@
 <!--pages/welcome/welcome.wxml-->
 <view class="welcome_top">
   <view class="head_title">北柒書畫</view>
-  <van-cell custom-class title="地址" title-width="" icon="location" is-link="true" bind:click="addEvent" />
+  <van-cell custom-class title="红灯笼" title-width="" icon="location" is-link="true" bind:click="addEvent" />
   <van-cell custom-class title="小程序" title-width="" icon="fire" is-link="true" bind:click="programEvent" />
 </view>
 

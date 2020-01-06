@@ -25,7 +25,6 @@
         "pages/main/main",
         "pages/work/work",
         "pages/people/people",
-        "pages/upload/upload",
         "pages/search/search"
       ]
     }

@@ -9,7 +9,12 @@ Page({
   data: {
     backTitle: '人气',
     backIcon: true,
-    active: 0
+    active: 0,
+    titles: [{
+      title: '关注'
+    }, {
+      title: '粉丝'
+    }]
   },
 
   /**
@@ -79,6 +84,14 @@ Page({
     this.setData({
       active: event.detail.name
     })
+  },
+
+  likeButton: function(info) {
+
+  },
+
+  userImgButton: function(info) {
+
   },
 
   /**
