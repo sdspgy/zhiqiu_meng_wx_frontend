@@ -68,7 +68,6 @@ App({
               code: code,
             },
             success: (e) => {
-              debugger
               if (e.data.isAuthor) {
                 this.globalData.isAuthor = true;
               } else {

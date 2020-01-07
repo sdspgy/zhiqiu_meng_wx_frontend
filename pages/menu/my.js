@@ -51,7 +51,29 @@ Page({
         color: 'linear-gradient(#00C5CD 0%, #00CED1 80%)',
         icon: true
       }
-    ]
+    ],
+    inspectingWorks: [{
+      title: 'sgfsdfsdf',
+      imgUrl: '../../static/images/logo.png'
+    }, {
+      title: 'sgfsdfsdf',
+      imgUrl: '../../static/images/logo.png'
+    }, {
+      title: 'sgfsdfsdf',
+      imgUrl: '../../static/images/logo.png'
+    }, {
+      title: 'sgfsdfsdf',
+      imgUrl: '../../static/images/logo.png'
+    }, {
+      title: 'sgfsdfsdf',
+      imgUrl: '../../static/images/logo.png'
+    }, {
+      title: 'sgfsdfsdf',
+      imgUrl: '../../static/images/logo.png'
+    }, {
+      title: 'sgfsdfsdf',
+      imgUrl: '../../static/images/logo.png'
+    }]
   },
 
   /**

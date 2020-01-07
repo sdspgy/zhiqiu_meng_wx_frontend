@@ -46,7 +46,7 @@ Page({
       let workObj = new Object();
       if (i % 3 == 0) {
         workObj.url = '../../static/images/mo.png';
-        workObj.text = "北柒书画";
+        workObj.text = "北柒书画，书画给围观书画给围观书画给围观书画给围观书画给围观给围观围观";
         workObj.name = "北柒-知秋";
         workObj.workId = i;
       } else {

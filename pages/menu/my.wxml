@@ -16,3 +16,17 @@
     </view>
   </view>
 </view>
+
+<view class="titleInspecting">待审核的作品</view>
+
+<view class="inspecting">
+  <van-icon bindtap="refresh" class="refresh" name="replay" color="#4876FF" />
+  <scroll-view id="scroll" scroll-y="true">
+    <view class="scroll_flex">
+      <view class="inspectingWorkItem" wx:for="{{inspectingWorks}}" wx:key="index">
+        <view class="workTitle">{{item.title}}</view>
+        <image class="workImg" src="{{item.imgUrl}}" mode="aspectFit"></image>
+      </view>
+    </view>
+  </scroll-view>
+</view>
