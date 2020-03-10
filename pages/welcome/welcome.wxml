@@ -6,7 +6,7 @@
 </view>
 
 <swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{indicatorDots}}">
-  <block wx:for="{{imgs}}" wx:key="{{index}}">
+  <block wx:for="{{imgs}}" wx:key="index">
     <swiper-item>
       <image bindtap="imgEvent" class="imgs" src="{{item.url}}" mode="aspectFill"></image>
       <view class="swiper">xxx

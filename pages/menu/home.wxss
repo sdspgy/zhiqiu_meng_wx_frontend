@@ -20,7 +20,7 @@
   height: 80rpx;
   margin-top: 16rpx;
   margin-left: 10rpx;
-  background-color: seagreen;
+  background-color: #fafafa;
   border-radius: 50px 30px 10px;
 }
 

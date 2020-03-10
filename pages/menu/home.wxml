@@ -15,7 +15,7 @@
     <view class="sign_num" wx:for="{{sign}}" wx:for-index="index" wx:for-item="item" wx:key="index">{{item}}</view>
     <view class="sign_text">人今日签到</view>
     <swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{indicatorDots}}" vertical="{{vertical}}">
-      <block wx:for="{{news}}" wx:key="{{index}}">
+      <block wx:for="{{news}}" wx:key="index">
         <swiper-item>
           <view class="swiper">{{item}}</view>
         </swiper-item>

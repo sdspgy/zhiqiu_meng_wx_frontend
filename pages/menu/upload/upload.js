@@ -97,7 +97,7 @@ Page({
    * 内容图标
    */
   onClickIconText: function() {
-    utils.showToast('恰到好处的描述更吸引人哦！')
+    utils.showToast('恰到好处的描述更吸引人哦')
   },
 
   beforeRead(event) {
@@ -129,7 +129,6 @@ Page({
    */
   workUpload: function() {
     let files = this.data.fileList;
-    debugger
     let filesPath = [];
     for (let key in files) {
       // 当设置 mutiple 为 true 时, file 为数组格式，否则为对象格式
