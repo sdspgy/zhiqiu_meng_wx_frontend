@@ -19,6 +19,10 @@ function text(data) {
   return utils.axios('post', headUrl + '/api/queryCreatives', data)
 }
 
+function welcomeInfo(data) {
+  return utils.axios('post', headUrl + '/open/welcome/info', data)
+}
+
 function uploadWork(data) {
   return utils.axios('post', headUrl + '/small/work/uploadWork', data)
 }
@@ -28,5 +32,6 @@ module.exports = {
   imgurl,
   uploadImg,
   text,
+  welcomeInfo,
   uploadWork
 }

@@ -1,6 +1,7 @@
 //app.js
 import utils from './utils/util.js';
 import requests from './utils/request.js';
+
 App({
   onLaunch: function(options) {
     //场景值

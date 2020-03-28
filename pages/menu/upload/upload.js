@@ -1,7 +1,11 @@
 // packageSearch/pages/upload/upload.js
 var utils = require('../../../utils/util.js');
 var request = require('../../../utils/request.js');
-
+var COS = require('../../../utils/cos-wx-sdk-v5.js');
+var cos = new COS({
+  SecretId: 'AKIDkHYu1sxrvnPlAKKuJWUBhIgpjQzMaYTA',
+  SecretKey: 'cz82nHoBRTFo79ueFbgVs1vZ7RVKtVt1',
+});
 Page({
 
   /**
@@ -10,7 +14,9 @@ Page({
   data: {
     backTitle: '上传',
     title: '',
+    errorTitle:'',
     text: '',
+    isTrue:true,
     fileList: []
   },
 
@@ -18,7 +24,25 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    // cos.sliceUploadFile({
 
+    //           Bucket: 'test-1250000000', // Bucket 格式：test-1250000000
+
+    //           Region: 'ap-guangzhou',
+
+    //           Key: 'txy.tp',
+
+    //   FilePath: '/Users/hoolai/Desktop/诸葛亮.jpeg '
+
+    // },
+
+    //       function (err, data) {
+
+    //             console.log(err, data);
+
+    //       }
+
+    // )
   },
 
   /**
@@ -76,8 +100,14 @@ Page({
     this.setData({
       title: event.detail.value
     })
+    utils.log(this.data.title
+    )
   },
-
+  focusTitle(){
+    this.setData({
+      errorTitle:''
+    })
+  },
   /**
    * 内容
    */
@@ -85,6 +115,8 @@ Page({
     this.setData({
       text: event.detail.value
     })
+    utils.log(this.data.title
+    )
   },
 
   /**
@@ -93,11 +125,21 @@ Page({
   onClickIconTitle: function() {
     utils.showToast('用于搜索栏快速查找')
   },
+  clearTitle:function() {
+    this.setData({
+      title:''
+    })
+  },
   /**
    * 内容图标
    */
   onClickIconText: function() {
     utils.showToast('恰到好处的描述更吸引人哦')
+  },
+  clearText: function () {
+    this.setData({
+      text: ''
+    })
   },
 
   beforeRead(event) {
@@ -128,22 +170,35 @@ Page({
    * 上传作品
    */
   workUpload: function() {
+    if(this.data.title.length <= 0){
+      this.setData({
+        errorTitle:'请填写必要内容'
+      })
+      return
+    }
     let files = this.data.fileList;
+    if(files.length <= 0){
+      utils.showToast("请至少选择一张图片")
+      return
+    }
     let filesPath = [];
     for (let key in files) {
       // 当设置 mutiple 为 true 时, file 为数组格式，否则为对象格式
       let imgurl = files[key].url;
       filesPath.push(files[key].url);
       wx.uploadFile({
-        url: request.imgurl, // 仅为示例，非真实的接口地址
+        url: request.imgurl,
         filePath: imgurl,
         name: 'file',
         header: {
           'Content-Type': 'multipart/form-data',
-          // 'token': wx.getStorageSync("token")
+          'token': wx.getStorageSync("token")
         },
         success: (res) => {
-
+          utils.showSuccess("上传成功")
+        },
+        fail(err) {
+          utils.showSuccess("上传失败")
         }
       });
     }
@@ -158,8 +213,11 @@ Page({
     }
     request.uploadWork(data)
       .then((res) => {
-
+       
       });
-
+    this.setData({
+      title: '',
+      text: ''
+    })
   }
 })

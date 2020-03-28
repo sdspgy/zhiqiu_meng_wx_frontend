@@ -4,3 +4,8 @@
   position: relative;
   top: 140rpx;
 }
+
+.upStyle{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}

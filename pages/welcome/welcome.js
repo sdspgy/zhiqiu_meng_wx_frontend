@@ -49,24 +49,34 @@ Page({
     // add: '医院'
     autoplay: true,
     indicatorDots: true,
-    interval: 10000,
-    duration: 500,
-    imgs: [{
-        url: '../../static/images/logo.png'
-      },
-      {
-        url: '../../static/images/logo.png'
-      },
-      {
-        url: '../../static/images/logo.png'
-      },
-    ]
+    interval: 3000,
+    duration: 200,
+    imgs: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    wx.request({
+      url: 'http://127.0.0.1:9001/meng/open/welcome/info',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded',
+      },
+      method: 'post',
+      data: '',
+      success: (res) => {
+        if (res.data.code === 200) {
+          this.setData({
+            imgs: res.data.datas
+          })
+        }
+      },
+      fail(err) {
+  
+      }
+    })
+  
     // 实例化API核心类
     // qqmapsdk = new QQMapWX({
     //   key: 'RGXBZ-WKOKW-5F6RY-OVGZZ-64EGT-BOBTX'
@@ -182,7 +192,7 @@ Page({
   imgEvent: function(info) {
     wx.previewImage({
       current: 'http://p1.pstatp.com/large/pgc-image/86c3def5b4b54c389f0ff57bc60a88b3', // 当前显示图片的http链接
-      urls: ['http://p1.pstatp.com/large/pgc-image/86c3def5b4b54c389f0ff57bc60a88b3']
+      urls: ['http://p1.pstatp.com/large/pgc-image/86c3def5b4b54c389f0ff57bc60a88b3']  // 需要预览的图片http链接列表
     })
   }
 

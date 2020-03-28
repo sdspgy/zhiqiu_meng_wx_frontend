@@ -24,7 +24,7 @@ function axios(method, url, data) {
       url: url,
       header: {
         'content-type': 'application/x-www-form-urlencoded',
-        // 'token': wx.getStorageSync("token")
+        'token': wx.getStorageSync("token")
       },
       method: method || 'post',
       data: data || '',
@@ -131,7 +131,7 @@ function showSuccess(text) {
     // title: text == undefined ? "success" : text,
     title: text || "success",
     icon: 'success',
-    duration: 1000
+    duration: 2000
   });
 }
 
@@ -151,7 +151,8 @@ function showLoading() {
 function showToast(info) {
   wx.showToast({
     title: `${info}`,
-    icon: 'none'
+    icon: 'none',
+    duration: 2000
   });
 }
 
