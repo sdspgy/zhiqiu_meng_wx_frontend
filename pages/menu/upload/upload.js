@@ -24,25 +24,27 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    // cos.sliceUploadFile({
-
-    //           Bucket: 'test-1250000000', // Bucket 格式：test-1250000000
-
-    //           Region: 'ap-guangzhou',
-
-    //           Key: 'txy.tp',
-
-    //   FilePath: '/Users/hoolai/Desktop/诸葛亮.jpeg '
-
-    // },
-
-    //       function (err, data) {
-
-    //             console.log(err, data);
-
-    //       }
-
-    // )
+    // 选择文件
+    wx.chooseImage({
+      count: 1, // 默认9
+      sizeType: ['original'], // 可以指定是原图还是压缩图，默认用原图
+      sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+      success: function (res) {
+        var filePath = res.tempFiles[0].path;
+        var filename = filePath.substr(filePath.lastIndexOf('/') + 1);
+        cos.postObject({
+          Bucket: 'zhiqiu-1256960496',
+          Region: 'ap-chengdu',
+          Key: filename,
+          FilePath: filePath,
+          onProgress: function (info) {
+            console.log(JSON.stringify(info));
+          }
+        }, function (err, data) {
+          console.log(err || data);
+        });
+      }
+    });
   },
 
   /**
