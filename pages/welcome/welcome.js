@@ -59,7 +59,7 @@ Page({
    */
   onLoad: function(options) {
     wx.request({
-      url: 'http://127.0.0.1:9001/meng/open/welcome/info',
+      url: 'http://10.2.10.41:9001/meng/open/welcome/info',
       header: {
         'content-type': 'application/x-www-form-urlencoded',
       },
